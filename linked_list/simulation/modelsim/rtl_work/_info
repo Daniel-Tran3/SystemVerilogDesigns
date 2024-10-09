@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/danie/Desktop/Code/linked_list/simulation/modelsim
+vlinked_list
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1726457593
+!i10b 1
+!s100 :aA9kJ`@fX1KP3Wcbe[eZ1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Idch<55g<>e]eI]9fHkzSV2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1726457585
+8C:/Users/danie/Desktop/Code/linked_list/linked_list.sv
+FC:/Users/danie/Desktop/Code/linked_list/linked_list.sv
+!i122 6
+L0 1 477
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1726457593.000000
+!s107 C:/Users/danie/Desktop/Code/linked_list/linked_list.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/danie/Desktop/Code/linked_list/linked_list.sv|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vmemory
+R1
+Z7 !s110 1726457005
+!i10b 1
+!s100 Si>_gg@E30<HJ4LAELRc<0
+R2
+I1zWcCDiFad8bXT71b7Q:G2
+R3
+S1
+R0
+w1721537027
+8C:/Users/danie/Desktop/Code/linked_list/memory.sv
+FC:/Users/danie/Desktop/Code/linked_list/memory.sv
+!i122 3
+L0 1 53
+R4
+r1
+!s85 0
+31
+Z8 !s108 1726457005.000000
+!s107 C:/Users/danie/Desktop/Code/linked_list/memory.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/danie/Desktop/Code/linked_list/memory.sv|
+!i113 1
+R5
+R6
+vtb_linked_list
+R1
+!s110 1726457041
+!i10b 1
+!s100 I`KdEXA[C^I5EQ;Fnl`cA2
+R2
+IKL4eF:CmYVh54e6YRjR1o0
+R3
+S1
+R0
+w1725838111
+8C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv
+FC:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv
+!i122 5
+L0 3 293
+R4
+r1
+!s85 0
+31
+!s108 1726457041.000000
+!s107 C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv|
+!i113 1
+R5
+R6
+vtb_rand_parallel_ll
+R1
+R7
+!i10b 1
+!s100 h4LJ:^R>aGVaNOIch2^K90
+R2
+IL0da^WGW7TF6QZ1@`:M;F0
+R3
+S1
+R0
+w1725856504
+8C:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv
+FC:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv
+!i122 4
+L0 3 173
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv|
+!i113 1
+R5
+R6
+vtb_rand_serial_ll
+R1
+!s110 1726457697
+!i10b 1
+!s100 F;aJ<@8Z9oao:^5MMUagT3
+R2
+IPNkHJ>en2amTdoYIeiQ6J3
+R3
+S1
+R0
+w1725844589
+8C:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv
+FC:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv
+!i122 7
+L0 3 233
+R4
+r1
+!s85 0
+31
+!s108 1726457697.000000
+!s107 C:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv|
+!i113 1
+R5
+R6

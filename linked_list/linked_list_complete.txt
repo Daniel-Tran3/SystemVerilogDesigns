@@ -1,0 +1,689 @@
+module linked_list#(
+  parameter int LL_NUM=4,
+  parameter int LL_DEPTH=16,
+  parameter int DATA_WIDTH=4,
+  parameter int READ_DELAY=3)
+(
+  input logic clk,
+  input logic reset,
+  output logic init_done,
+  input logic [DATA_WIDTH - 1 : 0] enq_data,
+  input logic enq_val,
+  input logic deq_val,
+  input logic [$clog2(LL_NUM) - 1 : 0] enq_id,
+  input logic [$clog2(LL_NUM) - 1 : 0] deq_id,
+  output logic [DATA_WIDTH - 1 : 0] output_data,
+  output logic output_val
+);
+
+  localparam int ADDR_WIDTH = $clog2(LL_DEPTH);
+  localparam int NUM_QUEUES = READ_DELAY + 2;
+  localparam int QUEUE_NUM_WIDTH = $clog2(NUM_QUEUES);
+  localparam int LL_NUM_WIDTH = $clog2(LL_NUM);
+
+
+
+  logic [DATA_WIDTH - 1 : 0] output_data_buffer;
+  logic                      output_val_buffer;
+
+  logic init;
+  logic init_ptr_mem_wr_en;
+  
+
+  
+  logic [ADDR_WIDTH - 1 : 0]                          init_ptr_mem_wr_addr;
+  logic [ADDR_WIDTH - 1 : 0]                          init_ptr_mem_wr_data;
+  
+  
+
+  
+  logic [ADDR_WIDTH : 0]          init_free_list_cntr;
+  logic [ADDR_WIDTH : 0]          init_free_list_queue_cntr;
+  logic [QUEUE_NUM_WIDTH - 1 : 0] init_free_list_tail_queue;
+  logic [ADDR_WIDTH - 1 : 0]      init_free_list_head_addr;
+  logic [ADDR_WIDTH - 1 : 0]      init_free_list_tail_addr;
+
+  logic [ADDR_WIDTH : 0]          enq_ll_cntr;
+  logic [ADDR_WIDTH : 0]          enq_ll_queue_cntr;
+  logic [QUEUE_NUM_WIDTH - 1 : 0] enq_ll_tail_queue;
+  logic [ADDR_WIDTH - 1 : 0]      enq_ll_head_addr;
+  logic [ADDR_WIDTH - 1 : 0]      enq_ll_tail_addr;
+  logic [DATA_WIDTH - 1 : 0]      enq_ll_head_data;
+
+  logic [ADDR_WIDTH : 0]          deq_ll_cntr;
+  logic [ADDR_WIDTH : 0]          deq_ll_queue_cntr;
+  logic [QUEUE_NUM_WIDTH - 1 : 0] deq_ll_head_queue;
+  logic                           deq_rd_ll_val;
+  logic [LL_NUM_WIDTH - 1 : 0]    deq_rd_ll_num;
+  logic [QUEUE_NUM_WIDTH - 1 : 0] deq_rd_queue_num;
+  
+  
+
+  logic enq_ptr_mem_wr_en;
+  logic enq_ptr_mem_rd_en;
+  logic enq_data_mem_wr_en;
+  // logic enq_data_mem_rd_en;
+
+  logic deq_ptr_mem_wr_en;
+  logic deq_ptr_mem_rd_en;
+  logic deq_data_mem_wr_en;
+  logic deq_data_mem_rd_en;
+
+  logic [ADDR_WIDTH - 1 : 0] enq_ptr_mem_wr_addr;
+  logic [ADDR_WIDTH - 1 : 0] enq_ptr_mem_rd_addr;
+  logic [ADDR_WIDTH - 1 : 0] enq_ptr_mem_wr_data;
+  logic [ADDR_WIDTH - 1 : 0] deq_ptr_mem_wr_addr;
+  logic [ADDR_WIDTH - 1 : 0] deq_ptr_mem_rd_addr;
+  logic [ADDR_WIDTH - 1 : 0] deq_ptr_mem_wr_data;
+
+  logic [ADDR_WIDTH - 1 : 0] enq_data_mem_wr_addr;
+  logic [DATA_WIDTH - 1 : 0] enq_data_mem_wr_data;
+  logic [ADDR_WIDTH - 1 : 0] deq_data_mem_rd_addr;
+
+  
+
+  logic [QUEUE_NUM_WIDTH - 1 : 0]                                enq_free_list_head_queue;
+  logic [ADDR_WIDTH : 0]                                         enq_free_list_cntr;
+  logic [ADDR_WIDTH : 0]                                         enq_free_list_queue_cntr;
+  logic                                                          enq_rd_free_list_val;
+  logic [QUEUE_NUM_WIDTH - 1 : 0]                                enq_rd_queue_num;
+
+
+  logic [ADDR_WIDTH : 0]                                         deq_free_list_cntr;
+  logic [ADDR_WIDTH : 0]                                         deq_free_list_queue_cntr;
+  logic [QUEUE_NUM_WIDTH - 1 : 0]                                deq_free_list_tail_queue;
+  logic [ADDR_WIDTH - 1 : 0]                                     deq_free_list_head_addr;
+  logic [ADDR_WIDTH - 1 : 0]                                     deq_free_list_tail_addr;
+  // logic [ADDR_WIDTH - 1 : 0]                                     enq_next_ll_head_addr;
+  // logic [DATA_WIDTH - 1 : 0]                                     enq_next_ll_head_data;
+
+  logic ptr_mem_wr_en, ptr_mem_rd_en, data_mem_wr_en, data_mem_rd_en;
+  logic [ADDR_WIDTH - 1 : 0] ptr_mem_wr_addr;
+  logic [ADDR_WIDTH - 1 : 0] ptr_mem_rd_addr;
+  logic [ADDR_WIDTH - 1 : 0] ptr_mem_wr_data;
+  logic [ADDR_WIDTH - 1 : 0] ptr_mem_rd_data;
+  logic [ADDR_WIDTH - 1 : 0] data_mem_wr_addr;
+  logic [ADDR_WIDTH - 1 : 0] data_mem_rd_addr;
+  logic [DATA_WIDTH - 1 : 0] data_mem_wr_data;
+  logic [DATA_WIDTH - 1 : 0] data_mem_rd_data;
+
+  logic [LL_NUM - 1 : 0][NUM_QUEUES - 1 : 0][ADDR_WIDTH - 1 : 0] ll_head_addrs;
+  logic [LL_NUM - 1 : 0][NUM_QUEUES - 1 : 0][ADDR_WIDTH - 1 : 0] ll_tail_addrs;
+  logic [LL_NUM - 1 : 0][NUM_QUEUES - 1 : 0][DATA_WIDTH - 1 : 0] ll_head_data;
+  // logic [LL_NUM - 1 : 0][NUM_QUEUES - 1 : 0][DATA_WIDTH - 1 : 0] ll_tail_data;
+  logic [LL_NUM - 1 : 0][QUEUE_NUM_WIDTH - 1 : 0]                ll_head_queues;
+  logic [LL_NUM - 1 : 0][QUEUE_NUM_WIDTH - 1 : 0]                next_ll_tail_queues;
+  logic [LL_NUM - 1 : 0][QUEUE_NUM_WIDTH - 1 : 0]                ll_tail_queues;
+  logic [LL_NUM - 1 : 0][ADDR_WIDTH : 0]                         ll_cntrs;
+  logic [LL_NUM - 1 : 0][NUM_QUEUES - 1 : 0][ADDR_WIDTH : 0]     ll_queue_cntrs;
+
+  logic [READ_DELAY - 1 : 0][LL_NUM_WIDTH - 1 : 0]               rd_ll_num_buffer;
+  logic [READ_DELAY - 1 : 0][QUEUE_NUM_WIDTH - 1 : 0]            rd_queue_num_buffer;
+  logic [READ_DELAY - 1 : 0]                                     rd_ll_val_buffer;
+  logic [READ_DELAY - 1 : 0]                                     rd_free_list_val_buffer;
+
+  logic [ADDR_WIDTH - 1 : 0]                                     rd_next_free_list_head_addr;
+  logic [ADDR_WIDTH - 1 : 0]                                     rd_next_ll_head_addr;
+  logic [DATA_WIDTH - 1 : 0]                                     rd_next_ll_head_data;
+
+
+  
+  
+  
+  logic [NUM_QUEUES - 1 : 0][ADDR_WIDTH - 1 : 0] free_list_head_addrs;
+  logic [NUM_QUEUES - 1 : 0][ADDR_WIDTH - 1 : 0] free_list_tail_addrs;
+  logic [QUEUE_NUM_WIDTH - 1 : 0]                free_list_head_queue;
+  logic [QUEUE_NUM_WIDTH - 1 : 0]                next_free_list_tail_queue;
+  logic [QUEUE_NUM_WIDTH - 1 : 0]                free_list_tail_queue;
+  logic [ADDR_WIDTH : 0]                         free_list_cntr;
+  logic [NUM_QUEUES - 1 : 0][ADDR_WIDTH : 0]     free_list_queue_cntrs;  
+
+  memory #(.MEM_DEPTH(LL_DEPTH), .DATA_WIDTH(ADDR_WIDTH), .DELAY_CYCLES(READ_DELAY)) ptr_mem(
+    .clk(clk),
+    .reset(reset),
+    .wr_en(ptr_mem_wr_en),
+    .wr_addr(ptr_mem_wr_addr),
+    .wr_data(ptr_mem_wr_data),
+    .rd_en(ptr_mem_rd_en),
+    .rd_addr(ptr_mem_rd_addr),
+    .rd_data(ptr_mem_rd_data)
+  );
+
+  memory #(.MEM_DEPTH(LL_DEPTH), .DATA_WIDTH(DATA_WIDTH), .DELAY_CYCLES(READ_DELAY)) data_mem(
+    .clk(clk),
+    .reset(reset),
+    .wr_en(data_mem_wr_en),
+    .wr_addr(data_mem_wr_addr),
+    .wr_data(data_mem_wr_data),
+    .rd_en(data_mem_rd_en),
+    .rd_addr(data_mem_rd_addr),
+    .rd_data(data_mem_rd_data)
+  );
+
+  // Init Section
+  always_comb begin
+    if (reset) begin
+      init_free_list_cntr        = 0;
+      init_free_list_queue_cntr  = 0;
+      init_free_list_head_addr   = 0;
+      init_free_list_tail_addr   = 0;
+      init_free_list_tail_queue  = 0;
+      init_ptr_mem_wr_en         = 0;
+      init_ptr_mem_wr_addr       = 0;
+      init_ptr_mem_wr_data       = 0;
+    end else if (init) begin
+      if (free_list_cntr == 0) begin
+        init_free_list_cntr        = free_list_cntr + 'd1;
+        init_free_list_queue_cntr  = free_list_queue_cntrs[free_list_head_queue] + 'd1;
+        init_free_list_head_addr   = free_list_cntr;
+        init_free_list_tail_addr   = free_list_cntr;
+        init_free_list_tail_queue  = free_list_head_queue;
+        init_ptr_mem_wr_en         = 0;
+        init_ptr_mem_wr_addr       = 0;
+        init_ptr_mem_wr_data       = 0;
+      end else if (free_list_queue_cntrs[next_free_list_tail_queue] == 0) begin
+        init_free_list_cntr       = free_list_cntr + 'd1;
+        init_free_list_queue_cntr = free_list_queue_cntrs[next_free_list_tail_queue] + 'd1;
+        init_free_list_head_addr  = free_list_cntr;
+        init_free_list_tail_addr  = free_list_cntr;
+        init_free_list_tail_queue = next_free_list_tail_queue;
+        init_ptr_mem_wr_en        = 0;
+        init_ptr_mem_wr_addr      = 0;
+        init_ptr_mem_wr_data      = 0;
+      end else begin
+        init_free_list_cntr       = free_list_cntr + 'd1;
+        init_free_list_queue_cntr = free_list_queue_cntrs[next_free_list_tail_queue] + 'd1;
+        init_free_list_head_addr  = free_list_head_addrs[next_free_list_tail_queue];
+        init_free_list_tail_addr  = free_list_cntr;
+        init_free_list_tail_queue = next_free_list_tail_queue;
+        init_ptr_mem_wr_en        = 1;
+        init_ptr_mem_wr_addr      = free_list_tail_addrs[next_free_list_tail_queue];
+        init_ptr_mem_wr_data      = free_list_cntr;
+      end
+    end else begin
+      init_free_list_cntr        = 0;
+      init_free_list_queue_cntr  = 0;
+      init_free_list_head_addr   = 0;
+      init_free_list_tail_addr   = 0;
+      init_free_list_tail_queue  = 0;
+      init_ptr_mem_wr_en         = 0;
+      init_ptr_mem_wr_addr       = 0;
+      init_ptr_mem_wr_data       = 0;
+    end
+  end
+
+  // Enq Linked List Section
+  always_comb begin
+    if (reset) begin
+      enq_ptr_mem_wr_en    = 0;
+      enq_ptr_mem_wr_addr  = 0;
+      enq_ptr_mem_wr_data  = 0;
+      enq_data_mem_wr_en   = 0;
+      enq_data_mem_wr_addr = 0;
+      enq_data_mem_wr_data = 0;
+
+      enq_ll_cntr          = 0;
+      enq_ll_queue_cntr    = 0;
+      enq_ll_tail_queue    = 0;
+      enq_ll_head_addr     = 0;
+      enq_ll_tail_addr     = 0;
+      enq_ll_head_data     = 0;
+      
+    end else if (!init) begin
+      if (enq_val && !deq_val) begin
+        if (ll_cntrs[enq_id] == 0) begin
+          enq_ptr_mem_wr_en    = 0;
+          enq_ptr_mem_wr_addr  = 0;
+          enq_ptr_mem_wr_data  = 0;
+          enq_data_mem_wr_en   = 0;
+          enq_data_mem_wr_addr = 0;
+          enq_data_mem_wr_data = 0;
+
+          enq_ll_cntr          = ll_cntrs[enq_id] + 'd1;
+          enq_ll_queue_cntr    = ll_queue_cntrs[enq_id][ll_head_queues[enq_id]] + 'd1;
+          enq_ll_tail_queue    = ll_head_queues[enq_id];
+          enq_ll_head_addr     = free_list_head_addrs[free_list_head_queue];
+          enq_ll_tail_addr     = free_list_head_addrs[free_list_head_queue];
+          enq_ll_head_data     = enq_data;
+        end else if (ll_queue_cntrs[enq_id][next_ll_tail_queues[enq_id]] == 0) begin
+          enq_ptr_mem_wr_en    = 0;
+          enq_ptr_mem_wr_addr  = 0;
+          enq_ptr_mem_wr_data  = 0;
+          enq_data_mem_wr_en   = 0;
+          enq_data_mem_wr_addr = 0;
+          enq_data_mem_wr_data = 0;
+
+          enq_ll_cntr          = ll_cntrs[enq_id] + 'd1;
+          enq_ll_queue_cntr    = ll_queue_cntrs[enq_id][next_ll_tail_queues[enq_id]] + 'd1;
+          enq_ll_tail_queue    = next_ll_tail_queues[enq_id];
+          enq_ll_head_addr     = free_list_head_addrs[free_list_head_queue];
+          enq_ll_tail_addr     = free_list_head_addrs[free_list_head_queue];
+          enq_ll_head_data     = enq_data;
+        end else begin
+          enq_ptr_mem_wr_en    = 1;
+          enq_ptr_mem_wr_addr  = ll_tail_addrs[enq_id][next_ll_tail_queues[enq_id]];
+          enq_ptr_mem_wr_data  = free_list_head_addrs[free_list_head_queue];
+          enq_data_mem_wr_en   = 1;
+          enq_data_mem_wr_addr = ll_tail_addrs[enq_id][next_ll_tail_queues[enq_id]];
+          enq_data_mem_wr_data = enq_data;
+
+          enq_ll_cntr          = ll_cntrs[enq_id] + 'd1;
+          enq_ll_queue_cntr    = ll_queue_cntrs[enq_id][next_ll_tail_queues[enq_id]] + 'd1;
+          enq_ll_tail_queue    = next_ll_tail_queues[enq_id];
+          enq_ll_head_addr     = ll_head_addrs[enq_id][next_ll_tail_queues[enq_id]];
+          enq_ll_tail_addr     = free_list_head_addrs[free_list_head_queue];
+          enq_ll_head_data     = ll_head_data[enq_id][next_ll_tail_queues[enq_id]];
+        end
+      end else begin
+        enq_ptr_mem_wr_en    = 0;
+        enq_ptr_mem_wr_addr  = 0;
+        enq_ptr_mem_wr_data  = 0;
+        enq_data_mem_wr_en   = 0;
+        enq_data_mem_wr_addr = 0;
+        enq_data_mem_wr_data = 0;
+
+        enq_ll_cntr          = 0;
+        enq_ll_queue_cntr    = 0;
+        enq_ll_tail_queue    = 0;
+        enq_ll_head_addr     = 0;
+        enq_ll_tail_addr     = 0;
+        enq_ll_head_data     = 0;
+      end 
+    end else begin
+      enq_ptr_mem_wr_en    = 0;
+      enq_ptr_mem_wr_addr  = 0;
+      enq_ptr_mem_wr_data  = 0;
+      enq_data_mem_wr_en   = 0;
+      enq_data_mem_wr_addr = 0;
+      enq_data_mem_wr_data = 0;
+
+      enq_ll_cntr          = 0;
+      enq_ll_queue_cntr    = 0;
+      enq_ll_tail_queue    = 0;
+      enq_ll_head_addr     = 0;
+      enq_ll_tail_addr     = 0;
+      enq_ll_head_data     = 0;
+    end
+  end
+
+  // Deq Linked List Section
+  always_comb begin
+    if (reset) begin
+      deq_data_mem_rd_en   = 0;
+      deq_data_mem_rd_addr = 0;
+      deq_ptr_mem_rd_en    = 0;
+      deq_ptr_mem_rd_addr  = 0;
+
+      deq_ll_cntr          = 0;
+      deq_ll_queue_cntr    = 0;
+      deq_ll_head_queue    = 0;
+      deq_rd_ll_val        = 0;
+      deq_rd_ll_num        = 0;
+      deq_rd_queue_num     = 0;
+    end else if (!init) begin
+      if (deq_val && !enq_val) begin
+        if (ll_queue_cntrs[deq_id][ll_head_queues[deq_id]] > 1) begin
+          deq_data_mem_rd_en   = 1;
+          deq_data_mem_rd_addr = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+          deq_ptr_mem_rd_en    = 1;
+          deq_ptr_mem_rd_addr  = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+
+          deq_ll_cntr          = ll_cntrs[deq_id] - 'd1;
+          deq_ll_queue_cntr    = ll_queue_cntrs[deq_id][ll_head_queues[deq_id]] - 'd1;
+          deq_ll_head_queue    = (ll_head_queues[deq_id] + 'd1) % NUM_QUEUES;
+          deq_rd_ll_val        = 1;
+          deq_rd_ll_num        = deq_id;
+          deq_rd_queue_num     = ll_head_queues[deq_id];
+        end else begin
+          deq_data_mem_rd_en   = 0;
+          deq_data_mem_rd_addr = 0;
+          deq_ptr_mem_rd_en    = 0;
+          deq_ptr_mem_rd_addr  = 0;
+
+          deq_ll_cntr          = ll_cntrs[deq_id] - 'd1;
+          deq_ll_queue_cntr    = ll_queue_cntrs[deq_id][ll_head_queues[deq_id]] - 'd1;
+          deq_ll_head_queue    = (ll_head_queues[deq_id] + 'd1) % NUM_QUEUES;
+          deq_rd_ll_val        = 0;
+          deq_rd_ll_num        = 0;
+          deq_rd_queue_num     = 0;
+        end
+      end else begin
+        deq_data_mem_rd_en   = 0;
+        deq_data_mem_rd_addr = 0;
+        deq_ptr_mem_rd_en    = 0;
+        deq_ptr_mem_rd_addr  = 0;
+
+        deq_ll_cntr          = 0;
+        deq_ll_queue_cntr    = 0;
+        deq_ll_head_queue    = 0;
+        deq_rd_ll_val        = 0;
+        deq_rd_ll_num        = 0;
+        deq_rd_queue_num     = 0;
+      end
+    end else begin
+      deq_data_mem_rd_en   = 0;
+      deq_data_mem_rd_addr = 0;
+      deq_ptr_mem_rd_en    = 0;
+      deq_ptr_mem_rd_addr  = 0;
+
+      deq_ll_cntr          = 0;
+      deq_ll_queue_cntr    = 0;
+      deq_ll_head_queue    = 0;
+      deq_rd_ll_val        = 0;
+      deq_rd_ll_num        = 0;
+      deq_rd_queue_num     = 0;
+    end
+  end
+
+
+  // Enq Free List Section
+  always_comb begin
+    if (reset) begin
+      enq_ptr_mem_rd_en          = 0;
+      enq_ptr_mem_rd_addr        = 0;
+      enq_rd_free_list_val       = 0;
+      enq_rd_queue_num           = 0;
+      enq_free_list_head_queue   = 0;
+      enq_free_list_cntr         = 0;
+      enq_free_list_queue_cntr   = 0;
+    end else if (!init) begin
+      if (enq_val && !deq_val) begin
+        if (free_list_queue_cntrs[free_list_head_queue] > 1) begin
+          enq_ptr_mem_rd_en        = 1;
+          enq_ptr_mem_rd_addr      = free_list_head_addrs[free_list_head_queue];
+          enq_rd_free_list_val     = 1;
+          enq_rd_queue_num         = free_list_head_queue;  
+          enq_free_list_head_queue = (free_list_head_queue + 'd1) % NUM_QUEUES;
+          enq_free_list_cntr       = free_list_cntr - 'd1;
+          enq_free_list_queue_cntr = free_list_queue_cntrs[free_list_head_queue] - 'd1;
+        end else begin 
+          enq_ptr_mem_rd_en        = 0;
+          enq_ptr_mem_rd_addr      = 0;
+          enq_rd_free_list_val     = 0;
+          enq_rd_queue_num         = 0;
+          enq_free_list_head_queue = (free_list_head_queue + 'd1) % NUM_QUEUES;
+          enq_free_list_cntr       = free_list_cntr - 'd1;
+          enq_free_list_queue_cntr = free_list_queue_cntrs[free_list_head_queue] - 'd1;
+        end
+      end else begin
+        enq_ptr_mem_rd_en          = 0;
+        enq_ptr_mem_rd_addr        = 0;
+        enq_rd_free_list_val       = 0;
+        enq_rd_queue_num           = 0;
+        enq_free_list_head_queue   = 0;
+        enq_free_list_cntr         = 0;
+        enq_free_list_queue_cntr   = 0;
+      end
+    end else begin
+      enq_ptr_mem_rd_en          = 0;
+      enq_ptr_mem_rd_addr        = 0;
+      enq_rd_free_list_val       = 0;
+      enq_rd_queue_num           = 0;
+      enq_free_list_head_queue   = 0;
+      enq_free_list_cntr         = 0;
+      enq_free_list_queue_cntr   = 0;
+    end
+  end
+
+  // Deq Free List Section
+  always_comb begin
+    if (reset) begin
+      deq_ptr_mem_wr_en        = 0;
+      deq_ptr_mem_wr_addr      = 0;
+      deq_ptr_mem_wr_data      = 0;
+
+      deq_free_list_cntr       = 0;
+      deq_free_list_queue_cntr = 0;
+      deq_free_list_tail_queue = 0;
+      deq_free_list_head_addr  = 0;
+      deq_free_list_tail_addr  = 0;
+    end else if (!init) begin
+      if (deq_val && !enq_val) begin
+        if (free_list_cntr == 0) begin
+          deq_ptr_mem_wr_en        = 0;
+          deq_ptr_mem_wr_addr      = 0;
+          deq_ptr_mem_wr_data      = 0;
+
+          deq_free_list_cntr       = free_list_cntr + 'd1;
+          deq_free_list_queue_cntr = free_list_cntr[free_list_head_queue] + 'd1;
+          deq_free_list_tail_queue = free_list_head_queue;
+          deq_free_list_head_addr  = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+          deq_free_list_tail_addr  = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+        end else if (free_list_queue_cntrs[free_list_head_queue] == 0) begin
+          deq_ptr_mem_wr_en        = 0;
+          deq_ptr_mem_wr_addr      = 0;
+          deq_ptr_mem_wr_data      = 0;
+
+          deq_free_list_cntr       = free_list_cntr + 'd1;
+          deq_free_list_queue_cntr = free_list_cntr[next_free_list_tail_queue] + 'd1;
+          deq_free_list_tail_queue = next_free_list_tail_queue;
+          deq_free_list_head_addr  = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+          deq_free_list_tail_addr  = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+        end else begin
+          deq_ptr_mem_wr_en        = 1;
+          deq_ptr_mem_wr_addr      = free_list_tail_addrs[next_free_list_tail_queue];
+          deq_ptr_mem_wr_data      = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+
+          deq_free_list_cntr       = free_list_cntr + 'd1;
+          deq_free_list_queue_cntr = free_list_queue_cntrs[next_free_list_tail_queue] + 'd1;
+          deq_free_list_tail_queue = next_free_list_tail_queue;
+          deq_free_list_head_addr  = free_list_head_addrs[next_free_list_tail_queue];
+          deq_free_list_tail_addr  = ll_head_addrs[deq_id][ll_head_queues[deq_id]];
+        end
+      end else begin
+        deq_ptr_mem_wr_en        = 0;
+        deq_ptr_mem_wr_addr      = 0;
+        deq_ptr_mem_wr_data      = 0;
+
+        deq_free_list_cntr       = 0;
+        deq_free_list_queue_cntr = 0;
+        deq_free_list_tail_queue = 0;
+        deq_free_list_head_addr  = 0;
+        deq_free_list_tail_addr  = 0;
+      end
+    end else begin
+      deq_ptr_mem_wr_en        = 0;
+      deq_ptr_mem_wr_addr      = 0;
+      deq_ptr_mem_wr_data      = 0;
+
+      deq_free_list_cntr       = 0;
+      deq_free_list_queue_cntr = 0;
+      deq_free_list_tail_queue = 0;
+      deq_free_list_head_addr  = 0;
+      deq_free_list_tail_addr  = 0;
+    end
+  end
+
+
+  assign ptr_mem_wr_en             = init ? init_ptr_mem_wr_en : (enq_val ? enq_ptr_mem_wr_en : (deq_val ? deq_ptr_mem_wr_en : 0));
+  assign ptr_mem_wr_addr           = init ? init_ptr_mem_wr_addr : (enq_val ? enq_ptr_mem_wr_addr : (deq_val ? deq_ptr_mem_wr_addr : 0));
+  assign ptr_mem_wr_data           = init ? init_ptr_mem_wr_data : (enq_val ? enq_ptr_mem_wr_data : (deq_val ? deq_ptr_mem_wr_data : 0));
+
+  assign ptr_mem_rd_en             = enq_val ? enq_ptr_mem_rd_en : (deq_val ? deq_ptr_mem_rd_en : 0);
+  assign ptr_mem_rd_addr           = enq_val ? enq_ptr_mem_rd_addr : (deq_val ? deq_ptr_mem_rd_addr : 0);
+
+  assign data_mem_wr_en            = enq_val ? enq_data_mem_wr_en : 0;
+  assign data_mem_wr_addr          = enq_val ? enq_data_mem_wr_addr : 0;
+  assign data_mem_wr_data          = enq_val ? enq_data_mem_wr_data : 0;
+
+  assign data_mem_rd_en            = deq_val ? deq_data_mem_rd_en : 0;
+  assign data_mem_rd_addr          = deq_val ? deq_data_mem_rd_addr : 0;
+  
+  // assign output_data               = ll_head_data[deq_id][ll_head_queues[deq_id]];
+  // assign output_val                = (deq_val && !enq_val);
+
+  assign output_data               = output_data_buffer;
+  assign output_val                = output_val_buffer;
+
+  assign init_done                 = !init;
+
+  assign next_free_list_tail_queue = (free_list_tail_queue + 'd1) % NUM_QUEUES;
+
+  always_comb begin
+    for (int i = 0; i < LL_NUM; i++) begin
+      next_ll_tail_queues[i] = (ll_tail_queues[i] + 'd1) % NUM_QUEUES;
+    end
+  end
+
+  always_ff@(posedge clk) begin
+    if (reset) begin
+      init                  <= 1;
+      free_list_cntr        <= 0;
+      free_list_queue_cntrs <= 0;
+      free_list_head_queue  <= 0;
+      free_list_tail_queue  <= 0;
+    end else if (init) begin
+      free_list_cntr                                     <= init_free_list_cntr;
+      free_list_tail_queue                               <= init_free_list_tail_queue;
+      if (free_list_cntr == 0) begin
+        free_list_queue_cntrs[free_list_head_queue]      <= init_free_list_queue_cntr;
+        free_list_head_addrs[free_list_head_queue]       <= init_free_list_head_addr;
+        free_list_tail_addrs[free_list_head_queue]       <= init_free_list_tail_addr;
+      end else begin
+        free_list_queue_cntrs[next_free_list_tail_queue] <= init_free_list_queue_cntr;
+        free_list_head_addrs[next_free_list_tail_queue]  <= init_free_list_head_addr;
+        free_list_tail_addrs[next_free_list_tail_queue]  <= init_free_list_tail_addr;
+      end
+      if (free_list_cntr == LL_DEPTH - 1) begin
+        init <= 0;
+      end
+    end else begin
+      if (enq_val) begin
+        free_list_cntr                              <= enq_free_list_cntr;
+        free_list_queue_cntrs[free_list_head_queue] <= enq_free_list_queue_cntr;
+        free_list_head_queue                        <= enq_free_list_head_queue;
+        if (rd_free_list_val_buffer[READ_DELAY - 1] && rd_queue_num_buffer[READ_DELAY - 1] != free_list_head_queue) begin
+          free_list_head_addrs[rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+        end
+      end else if (deq_val) begin 
+        free_list_cntr                                     <= deq_free_list_cntr;
+        free_list_tail_queue                               <= deq_free_list_tail_queue;
+        if (free_list_cntr == 0) begin
+          free_list_queue_cntrs[free_list_head_queue]      <= deq_free_list_queue_cntr;
+          free_list_head_addrs[free_list_head_queue]       <= deq_free_list_head_addr;
+          free_list_tail_addrs[free_list_head_queue]       <= deq_free_list_tail_addr;
+          if (rd_free_list_val_buffer[READ_DELAY - 1] && rd_queue_num_buffer[READ_DELAY - 1] != free_list_head_queue) begin
+            free_list_head_addrs[rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+          end 
+        end else begin
+          free_list_queue_cntrs[next_free_list_tail_queue] <= deq_free_list_queue_cntr;
+          free_list_head_addrs[next_free_list_tail_queue]  <= deq_free_list_head_addr;
+          free_list_tail_addrs[next_free_list_tail_queue]  <= deq_free_list_tail_addr;
+          if (rd_free_list_val_buffer[READ_DELAY - 1] && !(rd_queue_num_buffer[READ_DELAY - 1] == next_free_list_tail_queue 
+              && free_list_queue_cntrs[next_free_list_tail_queue] == 0)) begin
+            free_list_head_addrs[rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+          end 
+        end
+      end else begin
+        free_list_cntr        <= free_list_cntr;
+        free_list_queue_cntrs <= free_list_queue_cntrs;
+        free_list_head_addrs  <= free_list_head_addrs;
+        free_list_tail_addrs  <= free_list_tail_addrs;
+        free_list_tail_queue  <= free_list_tail_queue;
+        if (rd_free_list_val_buffer[READ_DELAY - 1]) begin
+          free_list_head_addrs[rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+        end
+      end
+    end
+  end
+
+  
+  always_ff@(posedge clk) begin
+    if (reset) begin
+      ll_cntrs       <= 0;
+      ll_queue_cntrs <= 0;
+      ll_head_queues <= 0;
+      ll_tail_queues <= 0;
+    end else if (!init) begin
+      if (enq_val) begin
+        ll_cntrs[enq_id]                                      <= enq_ll_cntr;
+        ll_tail_queues[enq_id]                                <= enq_ll_tail_queue;
+        if (ll_cntrs[enq_id] == 0) begin
+          ll_queue_cntrs[enq_id][ll_head_queues[enq_id]]      <= enq_ll_queue_cntr;
+          ll_head_addrs[enq_id][ll_head_queues[enq_id]]       <= enq_ll_head_addr;
+          ll_tail_addrs[enq_id][ll_head_queues[enq_id]]       <= enq_ll_tail_addr;
+          ll_head_data[enq_id][ll_head_queues[enq_id]]        <= enq_ll_head_data;
+          if (rd_ll_val_buffer[READ_DELAY - 1] && !(rd_ll_num_buffer[READ_DELAY - 1] == enq_id && rd_queue_num_buffer[READ_DELAY - 1] == ll_head_queues[enq_id])) begin
+            ll_head_addrs[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+            ll_head_data[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]]  <= data_mem_rd_data;
+          end
+        end else begin
+          ll_queue_cntrs[enq_id][next_ll_tail_queues[enq_id]] <= enq_ll_queue_cntr;
+          ll_head_addrs[enq_id][next_ll_tail_queues[enq_id]]  <= enq_ll_head_addr;
+          ll_tail_addrs[enq_id][next_ll_tail_queues[enq_id]]  <= enq_ll_tail_addr;
+          ll_head_data[enq_id][next_ll_tail_queues[enq_id]]   <= enq_ll_head_data;
+          if (rd_ll_val_buffer[READ_DELAY - 1] && !(rd_ll_num_buffer[READ_DELAY - 1] == enq_id && rd_queue_num_buffer[READ_DELAY - 1] == next_ll_tail_queues[enq_id]
+              &&ll_queue_cntrs[next_ll_tail_queues[enq_id]] == 0)) begin
+            ll_head_addrs[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+            ll_head_data[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]]  <= data_mem_rd_data;
+          end
+        end
+      end else if (deq_val) begin
+        ll_cntrs[deq_id]                               <= deq_ll_cntr;
+        ll_queue_cntrs[deq_id][ll_head_queues[deq_id]] <= deq_ll_queue_cntr;
+        ll_head_queues[deq_id]                         <= deq_ll_head_queue;
+        if (rd_ll_val_buffer[READ_DELAY - 1] && !(rd_ll_num_buffer[READ_DELAY - 1] == deq_id && rd_queue_num_buffer[READ_DELAY - 1] == ll_head_queues[deq_id])) begin
+          ll_head_addrs[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+          ll_head_data[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]]  <= data_mem_rd_data;
+        end
+      end else begin
+        ll_cntrs       <= ll_cntrs;
+        ll_queue_cntrs <= ll_queue_cntrs;
+        ll_head_addrs  <= ll_head_addrs;
+        ll_tail_addrs  <= ll_tail_addrs;
+        ll_tail_queues <= ll_tail_queues;
+        if (rd_ll_val_buffer[READ_DELAY - 1]) begin
+          ll_head_addrs[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]] <= ptr_mem_rd_data;
+          ll_head_data[rd_ll_num_buffer[READ_DELAY - 1]][rd_queue_num_buffer[READ_DELAY - 1]]  <= data_mem_rd_data;
+        end
+      end
+    end
+  end
+
+  always_ff@(posedge clk) begin
+    if (reset) begin
+      rd_free_list_val_buffer <= 0;
+      rd_ll_num_buffer        <= 0;
+      rd_ll_val_buffer        <= 0;
+      rd_queue_num_buffer     <= 0;
+    end else if (!init) begin
+      if (enq_val && !deq_val) begin
+        rd_queue_num_buffer[0]     <= enq_rd_queue_num;
+      end
+      rd_free_list_val_buffer[0] <= enq_rd_free_list_val;
+      rd_ll_val_buffer[0]        <= deq_rd_ll_val;
+      rd_ll_num_buffer[0]        <= deq_rd_ll_num;
+      if (deq_val && !enq_val) begin
+        rd_queue_num_buffer[0]     <= deq_rd_queue_num;
+      end
+      for (int i = 1; i < READ_DELAY; i++) begin
+        rd_free_list_val_buffer[i] <= rd_free_list_val_buffer[i-1];
+        rd_ll_num_buffer[i]        <= rd_ll_num_buffer[i-1];
+        rd_ll_val_buffer[i]        <= rd_ll_val_buffer[i-1];
+        rd_queue_num_buffer[i]     <= rd_queue_num_buffer[i-1];
+      end
+    end
+  end
+
+  always_ff@(posedge clk) begin
+    if (!reset && !init) begin
+      output_data_buffer <= ll_head_data[deq_id][ll_head_queues[deq_id]];
+      output_val_buffer  <= (deq_val && !enq_val);
+    end else begin
+      output_data_buffer <= 0;
+      output_val_buffer  <= 0;
+    end
+  end
+  
+
+
+
+  always@(posedge clk) begin
+    // assert (init || (!enq_val || !deq_val)) else $error("Tried to enqueue and dequeue on same cycle.");
+    assert (init || (!(enq_val && free_list_cntr == 0))) else $error("Tried to enqueue with no free addresses.");
+    assert (init || (!(deq_val && ll_cntrs[deq_id] == 0))) else $error("Tried to dequeue from empty linked list.");
+    assert (init || (!(enq_val && free_list_queue_cntrs[free_list_head_queue] == 0))) else $error("Tried to enqueue, current free list queue is empty.");
+    assert (init || (!(deq_val && ll_queue_cntrs[deq_id][ll_head_queues[deq_id]] == 0))) else $error("Tried to dequeue, current linked list queue is empty.");
+  end
+
+endmodule:linked_list

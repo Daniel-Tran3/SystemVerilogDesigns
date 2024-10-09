@@ -1,0 +1,863 @@
+# Reading pref.tcl
+# do arbiter_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/danie/Desktop/Code/arbiter {C:/Users/danie/Desktop/Code/arbiter/arbiter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:50:12 on Jul 03,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/danie/Desktop/Code/arbiter" C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 19:50:12 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:50:53 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 19:50:53 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:50:53 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 19:50:53 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.arbiter_testbench
+# vsim work.arbiter_testbench 
+# Start time: 19:50:59 on Jul 03,2024
+# Loading sv_std.std
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+add wave sim:/arbiter_testbench/*
+run
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:55:20 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 19:55:20 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:55:20 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 19:55:20 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:56:25 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 19:56:26 on Jul 03,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:56:26 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 19:56:26 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave sim:/arbiter_testbench/arb/*
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:58:32 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 19:58:32 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:58:32 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 19:58:32 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -continue
+quit -sim
+# End time: 19:59:26 on Jul 03,2024, Elapsed time: 0:08:27
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:59:34 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 19:59:34 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:59:34 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 19:59:34 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.arbiter_testbench
+# vsim work.arbiter_testbench 
+# Start time: 19:59:38 on Jul 03,2024
+# Loading sv_std.std
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+add wave sim:/arbiter_testbench/*
+run
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+add wave sim:/arbiter_testbench/arb/*
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:06:06 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:06:06 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:07:26 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:07:26 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+add wave  \
+sim:/arbiter_testbench/arb/temp_mask
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:11:08 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:11:08 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:11:08 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:11:08 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:16:43 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:16:43 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:16:43 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:16:43 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:26:10 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:26:10 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:26:10 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:26:10 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:28:39 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:28:39 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:28:39 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:28:39 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+quit -sim
+# End time: 20:29:40 on Jul 03,2024, Elapsed time: 0:30:02
+# Errors: 0, Warnings: 0
+vsim work.arbiter_testbench
+# vsim work.arbiter_testbench 
+# Start time: 20:29:50 on Jul 03,2024
+# Loading sv_std.std
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+add wave sim:/arbiter_testbench/arb/*
+run
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:33:54 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:33:54 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:33:54 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:33:55 on Jul 03,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:36:57 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:36:57 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:36:57 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:36:57 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:42:48 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 20:42:48 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:42:48 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:42:48 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+# Warning in wave window restart: (vish-4014) No objects found matching '/arbiter_testbench/arb/temp_mask'. 
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:47:52 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(32): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(33): (vlog-12003) Variable 'one_hot_state' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(25). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(44): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(46): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 20:47:52 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:47:52 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:47:52 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+add wave sim:/arbiter_testbench/*
+add wave sim:/arbiter_testbench/arb/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:49:16 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(37): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(39): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 20:49:16 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:49:16 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:49:16 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+restart -f
+# Loading work.arbiter_testbench
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:50:40 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(37): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(39): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 20:50:40 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:50:40 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:50:40 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:53:44 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(37): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(39): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 20:53:44 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:53:44 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# ** Error: (vlog-13069) C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(33): near "'1": syntax error, unexpected UNSIZED_BIT, expecting ';'.
+# End time: 20:53:44 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+quit -sim
+# End time: 20:54:10 on Jul 03,2024, Elapsed time: 0:24:20
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:54:17 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(37): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(39): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 20:54:17 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:54:17 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:54:17 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.arbiter_testbench
+# vsim work.arbiter_testbench 
+# Start time: 20:54:21 on Jul 03,2024
+# Loading sv_std.std
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+add wave sim:/arbiter_testbench/arb/*
+run
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:59:50 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(37): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(39): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 20:59:50 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:59:50 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 20:59:50 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+run
+restart -f
+# Loading work.arbiter_testbench
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 220 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:02:31 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 21:02:31 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:02:31 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:02:31 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+# Warning in wave window restart: (vish-4014) No objects found matching '/arbiter_testbench/arb/one_hot_state'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/arbiter_testbench/arb/enc_state'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/arbiter_testbench/arb/next_state'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/arbiter_testbench/arb/mask'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/arbiter_testbench/arb/req_mask'. 
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 220 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:25 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(37): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 21:04:25 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:25 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:04:25 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+add wave sim:/arbiter_testbench/arb/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 220 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+quit -sim
+# End time: 21:05:14 on Jul 03,2024, Elapsed time: 0:10:53
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:05:20 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(37): (vlog-12003) Variable 'gnt' written by continuous and procedural assignments. See C:/Users/danie/Desktop/Code/arbiter/arbiter.sv(24). 
+# End time: 21:05:20 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:05:20 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:05:20 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.arbiter_testbench
+# vsim work.arbiter_testbench 
+# Start time: 21:05:30 on Jul 03,2024
+# Loading sv_std.std
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+add wave sim:/arbiter_testbench/arb/*
+run
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 220 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:06:33 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 21:06:33 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:06:33 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:06:33 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 220 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:20 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 21:07:20 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:20 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:07:20 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 220 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:08:00 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 21:08:00 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:08:00 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:08:00 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 340 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:09:58 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 21:09:58 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:09:58 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:09:58 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+add wave sim:/arbiter_testbench/arb/*
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:11:37 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter.sv 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 21:11:37 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:11:37 on Jul 03,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv 
+# -- Compiling module arbiter_testbench
+# 
+# Top level modules:
+# 	arbiter_testbench
+# End time: 21:11:37 on Jul 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.arbiter_testbench
+# Loading work.arbiter
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv(38)
+#    Time: 160 ns  Iteration: 0  Instance: /arbiter_testbench
+# Break in Module arbiter_testbench at C:/Users/danie/Desktop/Code/arbiter/arbiter_testbench.sv line 38
+# End time: 21:14:05 on Jul 03,2024, Elapsed time: 0:08:35
+# Errors: 0, Warnings: 0

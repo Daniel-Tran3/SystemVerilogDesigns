@@ -1,0 +1,23 @@
+|arbiter
+req[0] => gnt.DATAA
+req[0] => Equal0.IN31
+req[0] => ff1_holder.IN0
+req[1] => req_mask[1].IN1
+req[1] => ff1_holder.IN1
+req[1] => Equal0.IN30
+req[1] => ff1_holder.IN0
+req[2] => req_mask[2].IN1
+req[2] => ff1_holder.IN1
+req[2] => Equal0.IN29
+req[3] => req_mask[3].IN1
+req[3] => Equal0.IN28
+clk => enc_state[0].CLK
+clk => enc_state[1].CLK
+reset => enc_state.OUTPUTSELECT
+reset => enc_state.OUTPUTSELECT
+gnt[0] <= gnt.DB_MAX_OUTPUT_PORT_TYPE
+gnt[1] <= <GND>
+gnt[2] <= gnt.DB_MAX_OUTPUT_PORT_TYPE
+gnt[3] <= gnt.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,2316 @@
+# Reading pref.tcl
+# do linked_list_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/danie/Desktop/Code/linked_list {C:/Users/danie/Desktop/Code/linked_list/memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:00 on Sep 15,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/danie/Desktop/Code/linked_list" C:/Users/danie/Desktop/Code/linked_list/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 20:23:01 on Sep 15,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/danie/Desktop/Code/linked_list {C:/Users/danie/Desktop/Code/linked_list/linked_list.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:01 on Sep 15,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/danie/Desktop/Code/linked_list" C:/Users/danie/Desktop/Code/linked_list/linked_list.sv 
+# -- Compiling module linked_list
+# 
+# Top level modules:
+# 	linked_list
+# End time: 20:23:01 on Sep 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/linked_list.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:25 on Sep 15,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/linked_list.sv 
+# -- Compiling module linked_list
+# 
+# Top level modules:
+# 	linked_list
+# End time: 20:23:25 on Sep 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:25 on Sep 15,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 20:23:25 on Sep 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:23:25 on Sep 15,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv 
+# -- Compiling module tb_rand_parallel_ll
+# 
+# Top level modules:
+# 	tb_rand_parallel_ll
+# End time: 20:23:25 on Sep 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_rand_parallel_ll
+# vsim work.tb_rand_parallel_ll 
+# Start time: 20:23:30 on Sep 15,2024
+# Loading sv_std.std
+# Loading work.tb_rand_parallel_ll
+# Loading work.linked_list
+# Loading work.memory
+run
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Finished init.
+# Dequeued from queue 2, output was 40. Correct!
+# Dequeued from queue 3, output was 29. Correct!
+# Dequeued from queue 0, output was  4. Correct!
+# Dequeued from queue 0, output was 55. Correct!
+# Dequeued from queue 3, output was 20. Correct!
+# Dequeued from queue 2, output was 41. Correct!
+# Dequeued from queue 0, output was 40. Correct!
+# Dequeued from queue 0, output was 42. Correct!
+# Dequeued from queue 1, output was  5. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 2490 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 3, output was  0. Correct!
+# Dequeued from queue 2, output was 16. Correct!
+# Dequeued from queue 3, output was 27. Correct!
+# Dequeued from queue 2, output was  2. Correct!
+# Dequeued from queue 1, output was 26. Correct!
+# Dequeued from queue 0, output was 59. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 3230 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 3, output was 29. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 3310 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 1, output was 26. Should have been 54!
+# Dequeued from queue 2, output was 52. Correct!
+# Dequeued from queue 1, output was 36. Correct!
+# Dequeued from queue 0, output was 58. Should have been 21!
+# Dequeued from queue 0, output was  1. Should have been 58!
+# Dequeued from queue 3, output was 40. Should have been 44!
+# Dequeued from queue 3, output was 33. Correct!
+# Dequeued from queue 0, output was 22. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 4170 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 3, output was  9. Should have been  1!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 4390 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was  0. Should have been 15!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 4550 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was 37. Should have been 40!
+# Dequeued from queue 2, output was 35. Correct!
+# Dequeued from queue 1, output was 58. Should have been 21!
+# Dequeued from queue 2, output was  0. Correct!
+# Dequeued from queue 0, output was  3. Should have been  6!
+# Dequeued from queue 1, output was 29. Should have been 11!
+# Dequeued from queue 2, output was  5. Should have been 29!
+# Dequeued from queue 0, output was 58. Should have been  2!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5550 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was 28. Should have been  9!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5650 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was  x. Should have been 23!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5690 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 3, output was 46. Correct!
+# Dequeued from queue 0, output was  8. Should have been  5!
+# Dequeued from queue 1, output was  3. Should have been 26!
+# Dequeued from queue 1, output was 27. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 6270 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 6350 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 2, output was  x. Should have been 44!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 6410 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was 31. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 6530 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 3, output was 17. Should have been 37!
+# Dequeued from queue 0, output was  x. Should have been 42!
+# Dequeued from queue 3, output was 17. Should have been  5!
+# Dequeued from queue 1, output was 43. Should have been  0!
+# Dequeued from queue 1, output was  7. Should have been 22!
+# Dequeued from queue 1, output was  4. Should have been 42!
+# Dequeued from queue 0, output was 58. Should have been 31!
+# Dequeued from queue 3, output was 45. Correct!
+# Dequeued from queue 2, output was 55. Correct!
+# Dequeued from queue 2, output was 27. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 7810 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was 17. Correct!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 7910 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 8010 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was 38. Should have been 27!
+# Dequeued from queue 1, output was 60. Should have been 30!
+# Dequeued from queue 1, output was 31. Should have been 58!
+# Dequeued from queue 3, output was 51. Should have been  3!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 8570 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 0, output was 58. Should have been 25!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 8630 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 1, output was 31. Should have been 43!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 8850 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 2, output was 31. Should have been 38!
+# Dequeued from queue 2, output was  5. Should have been  1!
+# Dequeued from queue 1, output was 32. Should have been 58!
+# Dequeued from queue 0, output was 22. Should have been 14!
+# Dequeued from queue 1, output was 51. Should have been  8!
+# Dequeued from queue 1, output was 10. Should have been 61!
+# Dequeued from queue 1, output was 55. Should have been 45!
+# Dequeued from queue 3, output was 55. Should have been 13!
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 9690 ns  Scope: tb_rand_parallel_ll.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Dequeued from queue 1, output was  x. Should have been 56!
+# Dequeued from queue 2, output was 41. Correct!
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:24:01 on Sep 15,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv 
+# -- Compiling module tb_linked_list
+# 
+# Top level modules:
+# 	tb_linked_list
+# End time: 20:24:01 on Sep 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_linked_list
+# End time: 20:24:14 on Sep 15,2024, Elapsed time: 0:00:44
+# Errors: 20, Warnings: 0
+# vsim work.tb_linked_list 
+# Start time: 20:24:14 on Sep 15,2024
+# Loading sv_std.std
+# Loading work.tb_linked_list
+# Loading work.linked_list
+# Loading work.memory
+add wave sim:/tb_linked_list/tb_linked_list/*
+run
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Finished init.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   1 items, out of   1 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Queue 0 has   0 items, out of   0 total.
+# Dequeued from linked list 0, output was  1.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  2.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   2 items, out of   2 total.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   3 items, out of   3 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   4 items, out of   4 total.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has   5 items, out of   5 total.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has   6 items, out of   6 total.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has   7 items, out of   7 total.
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has   8 items, out of   8 total.
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has   9 items, out of   9 total.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has  10 items, out of  10 total.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has  11 items, out of  11 total.
+# Enqueueing to linked list 1, input was 40.
+# Queue 1 has   1 items, out of  12 total.
+# Enqueueing to linked list 1, input was 63.
+# Queue 1 has   2 items, out of  13 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 1970 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 1, input was 62.
+# Queue 1 has   3 items, out of  14 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 2010 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 1, input was 61.
+# Queue 1 has   4 items, out of  15 total.
+# Enqueueing to linked list 1, input was 60.
+# Queue 1 has   5 items, out of  16 total.
+# Enqueueing to linked list 1, input was 59.
+# Queue 1 has   6 items, out of  17 total.
+# Enqueueing to linked list 1, input was 58.
+# Queue 1 has   7 items, out of  18 total.
+# Enqueueing to linked list 1, input was 57.
+# Queue 1 has   8 items, out of  19 total.
+# Enqueueing to linked list 1, input was 56.
+# Queue 1 has   9 items, out of  20 total.
+# Enqueueing to linked list 1, input was 55.
+# Queue 1 has  10 items, out of  21 total.
+# Enqueueing to linked list 1, input was 54.
+# Queue 1 has  11 items, out of  22 total.
+# Enqueueing to linked list 1, input was 53.
+# Queue 1 has  12 items, out of  23 total.
+# Enqueueing to linked list 1, input was 52.
+# Queue 1 has  13 items, out of  24 total.
+# Enqueueing to linked list 1, input was 51.
+# Queue 1 has  14 items, out of  25 total.
+# Enqueueing to linked list 1, input was 50.
+# Queue 1 has  15 items, out of  26 total.
+# Enqueueing to linked list 1, input was 49.
+# Queue 1 has  16 items, out of  27 total.
+# Enqueueing to linked list 1, input was 48.
+# Queue 1 has  17 items, out of  28 total.
+# Enqueueing to linked list 1, input was 47.
+# Queue 1 has  18 items, out of  29 total.
+# Enqueueing to linked list 1, input was 46.
+# Queue 1 has  19 items, out of  30 total.
+# Enqueueing to linked list 1, input was 45.
+# Queue 1 has  20 items, out of  31 total.
+# Enqueueing to linked list 1, input was 44.
+# Queue 1 has  21 items, out of  32 total.
+# Enqueueing to linked list 0, input was 50.
+# Queue 0 has  12 items, out of  33 total.
+# Enqueueing to linked list 0, input was 30.
+# Queue 0 has  13 items, out of  34 total.
+# Enqueueing to linked list 0, input was 31.
+# Queue 0 has  14 items, out of  35 total.
+# Enqueueing to linked list 0, input was 32.
+# Queue 0 has  15 items, out of  36 total.
+# Enqueueing to linked list 0, input was 33.
+# Queue 0 has  16 items, out of  37 total.
+# Enqueueing to linked list 0, input was 34.
+# Queue 0 has  17 items, out of  38 total.
+# Enqueueing to linked list 0, input was 35.
+# Queue 0 has  18 items, out of  39 total.
+# Enqueueing to linked list 0, input was 36.
+# Queue 0 has  19 items, out of  40 total.
+# Enqueueing to linked list 0, input was 37.
+# Queue 0 has  20 items, out of  41 total.
+# Enqueueing to linked list 0, input was 38.
+# Queue 0 has  21 items, out of  42 total.
+# Enqueueing to linked list 0, input was 39.
+# Queue 0 has  22 items, out of  43 total.
+# Queue 1 has  20 items, out of  42 total.
+# Queue 1 has  19 items, out of  41 total.
+# Dequeued from linked list 1, output was 40.
+# Queue 1 has  18 items, out of  40 total.
+# Dequeued from linked list 1, output was 58.
+# Queue 1 has  17 items, out of  39 total.
+# Dequeued from linked list 1, output was 57.
+# Queue 1 has  16 items, out of  38 total.
+# Dequeued from linked list 1, output was 61.
+# Queue 1 has  15 items, out of  37 total.
+# Dequeued from linked list 1, output was 60.
+# Queue 1 has  14 items, out of  36 total.
+# Dequeued from linked list 1, output was 59.
+# Queue 1 has  13 items, out of  35 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 1 has  12 items, out of  34 total.
+# Dequeued from linked list 1, output was 31.
+# Queue 1 has  11 items, out of  33 total.
+# Dequeued from linked list 1, output was 56.
+# Queue 1 has  10 items, out of  32 total.
+# Dequeued from linked list 1, output was 55.
+# Queue 1 has   9 items, out of  31 total.
+# Dequeued from linked list 1, output was 54.
+# Queue 1 has   8 items, out of  30 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 1 has   7 items, out of  29 total.
+# Dequeued from linked list 1, output was 36.
+# Queue 1 has   6 items, out of  28 total.
+# Dequeued from linked list 1, output was 51.
+# Queue 1 has   5 items, out of  27 total.
+# Dequeued from linked list 1, output was 50.
+# Queue 1 has   4 items, out of  26 total.
+# Dequeued from linked list 1, output was 49.
+# Queue 1 has   3 items, out of  25 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 1 has   2 items, out of  24 total.
+# Dequeued from linked list 1, output was  0.
+# Queue 1 has   1 items, out of  23 total.
+# Dequeued from linked list 1, output was 46.
+# Queue 1 has   0 items, out of  22 total.
+# Dequeued from linked list 1, output was 45.
+# Queue 0 has  21 items, out of  21 total.
+# Dequeued from linked list 1, output was 44.
+# Queue 0 has  20 items, out of  20 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has  19 items, out of  19 total.
+# Dequeued from linked list 0, output was  0.
+# Queue 0 has  18 items, out of  18 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has  17 items, out of  17 total.
+# Dequeued from linked list 0, output was  2.
+# Queue 0 has  16 items, out of  16 total.
+# Dequeued from linked list 0, output was  3.
+# Queue 0 has  15 items, out of  15 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  14 items, out of  14 total.
+# Dequeued from linked list 0, output was  5.
+# Queue 0 has  13 items, out of  13 total.
+# Dequeued from linked list 0, output was 58.
+# Queue 0 has  12 items, out of  12 total.
+# Dequeued from linked list 0, output was 57.
+# Queue 0 has  11 items, out of  11 total.
+# Dequeued from linked list 0, output was  8.
+# Queue 0 has  10 items, out of  10 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   9 items, out of   9 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   8 items, out of   8 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   7 items, out of   7 total.
+# Dequeued from linked list 0, output was 31.
+# Queue 0 has   6 items, out of   6 total.
+# Dequeued from linked list 0, output was 32.
+# Queue 0 has   5 items, out of   5 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   4 items, out of   4 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   3 items, out of   3 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   2 items, out of   2 total.
+# Dequeued from linked list 0, output was 36.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was 37.
+# Queue 0 has   0 items, out of   0 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   2 items, out of   2 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   3 items, out of   3 total.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has   4 items, out of   4 total.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has   5 items, out of   5 total.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has   6 items, out of   6 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5130 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has   7 items, out of   7 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5170 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has   8 items, out of   8 total.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has   9 items, out of   9 total.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has  10 items, out of  10 total.
+# Enqueueing to linked list 0, input was 10.
+# Queue 0 has  11 items, out of  11 total.
+# Enqueueing to linked list 0, input was 11.
+# Queue 0 has  12 items, out of  12 total.
+# Enqueueing to linked list 0, input was 12.
+# Queue 0 has  13 items, out of  13 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5410 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 0, input was 13.
+# Queue 0 has  14 items, out of  14 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5450 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 0, input was 14.
+# Queue 0 has  15 items, out of  15 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 5490 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 0, input was 15.
+# Queue 0 has  16 items, out of  16 total.
+# Enqueueing to linked list 0, input was 16.
+# Queue 0 has  17 items, out of  17 total.
+# Enqueueing to linked list 0, input was 17.
+# Queue 0 has  18 items, out of  18 total.
+# Enqueueing to linked list 0, input was 18.
+# Queue 0 has  19 items, out of  19 total.
+# Enqueueing to linked list 0, input was 19.
+# Queue 0 has  20 items, out of  20 total.
+# Enqueueing to linked list 0, input was 20.
+# Queue 0 has  21 items, out of  21 total.
+# Enqueueing to linked list 0, input was 21.
+# Queue 0 has  22 items, out of  22 total.
+# Enqueueing to linked list 0, input was 22.
+# Queue 0 has  23 items, out of  23 total.
+# Enqueueing to linked list 0, input was 23.
+# Queue 0 has  24 items, out of  24 total.
+# Enqueueing to linked list 0, input was 24.
+# Queue 0 has  25 items, out of  25 total.
+# Enqueueing to linked list 0, input was 25.
+# Queue 0 has  26 items, out of  26 total.
+# Enqueueing to linked list 0, input was 26.
+# Queue 0 has  27 items, out of  27 total.
+# Enqueueing to linked list 0, input was 27.
+# Queue 0 has  28 items, out of  28 total.
+# Enqueueing to linked list 0, input was 28.
+# Queue 0 has  29 items, out of  29 total.
+# Enqueueing to linked list 0, input was 29.
+# Queue 0 has  30 items, out of  30 total.
+# Enqueueing to linked list 0, input was 30.
+# Queue 0 has  31 items, out of  31 total.
+# Enqueueing to linked list 0, input was 31.
+# Queue 0 has  32 items, out of  32 total.
+# Enqueueing to linked list 0, input was 32.
+# Queue 0 has  33 items, out of  33 total.
+# Enqueueing to linked list 0, input was 33.
+# Queue 0 has  34 items, out of  34 total.
+# Enqueueing to linked list 0, input was 34.
+# Queue 0 has  35 items, out of  35 total.
+# Enqueueing to linked list 0, input was 35.
+# Queue 0 has  36 items, out of  36 total.
+# Enqueueing to linked list 0, input was 36.
+# Queue 0 has  37 items, out of  37 total.
+# Enqueueing to linked list 0, input was 37.
+# Queue 0 has  38 items, out of  38 total.
+# Enqueueing to linked list 0, input was 38.
+# Queue 0 has  39 items, out of  39 total.
+# Enqueueing to linked list 0, input was 39.
+# Queue 0 has  40 items, out of  40 total.
+# Enqueueing to linked list 0, input was 40.
+# Queue 0 has  41 items, out of  41 total.
+# Enqueueing to linked list 0, input was 41.
+# Queue 0 has  42 items, out of  42 total.
+# Enqueueing to linked list 0, input was 42.
+# Queue 0 has  43 items, out of  43 total.
+# Enqueueing to linked list 0, input was 43.
+# Queue 0 has  44 items, out of  44 total.
+# Enqueueing to linked list 0, input was 44.
+# Queue 0 has  45 items, out of  45 total.
+# Enqueueing to linked list 0, input was 45.
+# Queue 0 has  46 items, out of  46 total.
+# Enqueueing to linked list 0, input was 46.
+# Queue 0 has  47 items, out of  47 total.
+# Enqueueing to linked list 0, input was 47.
+# Queue 0 has  48 items, out of  48 total.
+# Enqueueing to linked list 0, input was 48.
+# Queue 0 has  49 items, out of  49 total.
+# Enqueueing to linked list 0, input was 49.
+# Queue 0 has  50 items, out of  50 total.
+# Enqueueing to linked list 0, input was 50.
+# Queue 0 has  51 items, out of  51 total.
+# Enqueueing to linked list 0, input was 51.
+# Queue 0 has  52 items, out of  52 total.
+# Enqueueing to linked list 0, input was 52.
+# Queue 0 has  53 items, out of  53 total.
+# Enqueueing to linked list 0, input was 53.
+# Queue 0 has  54 items, out of  54 total.
+# Enqueueing to linked list 0, input was 54.
+# Queue 0 has  55 items, out of  55 total.
+# Enqueueing to linked list 0, input was 55.
+# Queue 0 has  56 items, out of  56 total.
+# Enqueueing to linked list 0, input was 56.
+# Queue 0 has  57 items, out of  57 total.
+# Enqueueing to linked list 0, input was 57.
+# Queue 0 has  58 items, out of  58 total.
+# Enqueueing to linked list 0, input was 58.
+# Queue 0 has  59 items, out of  59 total.
+# Enqueueing to linked list 0, input was 59.
+# Queue 0 has  60 items, out of  60 total.
+# Enqueueing to linked list 0, input was 60.
+# Queue 0 has  61 items, out of  61 total.
+# Enqueueing to linked list 0, input was 61.
+# Queue 0 has  62 items, out of  62 total.
+# Enqueueing to linked list 0, input was 62.
+# Queue 0 has  63 items, out of  63 total.
+# Enqueueing to linked list 0, input was 63.
+# Queue 0 has  64 items, out of  64 total.
+# Queue 0 has  63 items, out of  63 total.
+# Queue 0 has  62 items, out of  62 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  61 items, out of  61 total.
+# Dequeued from linked list 0, output was 11.
+# Queue 0 has  60 items, out of  60 total.
+# Dequeued from linked list 0, output was  2.
+# Queue 0 has  59 items, out of  59 total.
+# Dequeued from linked list 0, output was  3.
+# Queue 0 has  58 items, out of  58 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  57 items, out of  57 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  56 items, out of  56 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  55 items, out of  55 total.
+# Dequeued from linked list 0, output was 17.
+# Queue 0 has  54 items, out of  54 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  53 items, out of  53 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  52 items, out of  52 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  51 items, out of  51 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  50 items, out of  50 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  49 items, out of  49 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  48 items, out of  48 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  47 items, out of  47 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  46 items, out of  46 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  45 items, out of  45 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  44 items, out of  44 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  43 items, out of  43 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  42 items, out of  42 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  41 items, out of  41 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  40 items, out of  40 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  39 items, out of  39 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  38 items, out of  38 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  37 items, out of  37 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  36 items, out of  36 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  35 items, out of  35 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  34 items, out of  34 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  33 items, out of  33 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  32 items, out of  32 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  31 items, out of  31 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  30 items, out of  30 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  29 items, out of  29 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  28 items, out of  28 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  27 items, out of  27 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  26 items, out of  26 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  25 items, out of  25 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  24 items, out of  24 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  23 items, out of  23 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  22 items, out of  22 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  21 items, out of  21 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  20 items, out of  20 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  19 items, out of  19 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  18 items, out of  18 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  17 items, out of  17 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  16 items, out of  16 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  15 items, out of  15 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  14 items, out of  14 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  13 items, out of  13 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  12 items, out of  12 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  11 items, out of  11 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  10 items, out of  10 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   9 items, out of   9 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   8 items, out of   8 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   7 items, out of   7 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   6 items, out of   6 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   5 items, out of   5 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   4 items, out of   4 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   3 items, out of   3 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   2 items, out of   2 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   0 items, out of   0 total.
+run
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  x.
+# Finished loop.
+# Queue 0 has   0 items, out of   0 total.
+# Dequeued from linked list 0, output was  x.
+# Dequeued from linked list 0, output was  x.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   1 items, out of   1 total.
+# Enqueueing to linked list 2, input was  1.
+# Queue 2 has   1 items, out of   2 total.
+# Enqueueing to linked list 2, input was  2.
+# Queue 2 has   2 items, out of   3 total.
+# Enqueueing to linked list 2, input was  3.
+# Queue 2 has   3 items, out of   4 total.
+# Enqueueing to linked list 3, input was  4.
+# Queue 3 has   1 items, out of   5 total.
+# Enqueueing to linked list 2, input was  5.
+# Queue 2 has   4 items, out of   6 total.
+# Enqueueing to linked list 3, input was  6.
+# Queue 3 has   2 items, out of   7 total.
+# Enqueueing to linked list 1, input was  7.
+# Queue 1 has   1 items, out of   8 total.
+# Enqueueing to linked list 2, input was  8.
+# Queue 2 has   5 items, out of   9 total.
+# Enqueueing to linked list 3, input was  9.
+# Queue 3 has   3 items, out of  10 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 11250 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 3, input was 10.
+# Queue 3 has   4 items, out of  11 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 11370 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 1, input was 11.
+# Queue 1 has   2 items, out of  12 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 11430 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 1, input was 12.
+# Queue 1 has   3 items, out of  13 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 11550 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 1, input was 13.
+# Queue 1 has   4 items, out of  14 total.
+# ** Error: Tried to enqueue, current free list queue is empty.
+#    Time: 11670 ns  Scope: tb_linked_list.tb_linked_list File: C:/Users/danie/Desktop/Code/linked_list/linked_list.sv Line: 473
+# Enqueueing to linked list 0, input was 14.
+# Queue 0 has   2 items, out of  15 total.
+# Enqueueing to linked list 2, input was 15.
+# Queue 2 has   6 items, out of  16 total.
+# Enqueueing to linked list 1, input was 16.
+# Queue 1 has   5 items, out of  17 total.
+# Enqueueing to linked list 0, input was 17.
+# Queue 0 has   3 items, out of  18 total.
+# Enqueueing to linked list 0, input was 18.
+# Queue 0 has   4 items, out of  19 total.
+# Enqueueing to linked list 0, input was 19.
+# Queue 0 has   5 items, out of  20 total.
+# Enqueueing to linked list 1, input was 20.
+# Queue 1 has   6 items, out of  21 total.
+# Enqueueing to linked list 0, input was 21.
+# Queue 0 has   6 items, out of  22 total.
+# Enqueueing to linked list 2, input was 22.
+# Queue 2 has   7 items, out of  23 total.
+# Enqueueing to linked list 0, input was 23.
+# Queue 0 has   7 items, out of  24 total.
+# Enqueueing to linked list 2, input was 24.
+# Queue 2 has   8 items, out of  25 total.
+# Enqueueing to linked list 2, input was 25.
+# Queue 2 has   9 items, out of  26 total.
+# Enqueueing to linked list 2, input was 26.
+# Queue 2 has  10 items, out of  27 total.
+# Enqueueing to linked list 3, input was 27.
+# Queue 3 has   5 items, out of  28 total.
+# Enqueueing to linked list 1, input was 28.
+# Queue 1 has   7 items, out of  29 total.
+# Enqueueing to linked list 3, input was 29.
+# Queue 3 has   6 items, out of  30 total.
+# Enqueueing to linked list 2, input was 30.
+# Queue 2 has  11 items, out of  31 total.
+# Enqueueing to linked list 1, input was 31.
+# Queue 1 has   8 items, out of  32 total.
+# Enqueueing to linked list 2, input was 32.
+# Queue 2 has  12 items, out of  33 total.
+# Enqueueing to linked list 2, input was 33.
+# Queue 2 has  13 items, out of  34 total.
+# Enqueueing to linked list 3, input was 34.
+# Queue 3 has   7 items, out of  35 total.
+# Enqueueing to linked list 1, input was 35.
+# Queue 1 has   9 items, out of  36 total.
+# Enqueueing to linked list 3, input was 36.
+# Queue 3 has   8 items, out of  37 total.
+# Enqueueing to linked list 3, input was 37.
+# Queue 3 has   9 items, out of  38 total.
+# Enqueueing to linked list 0, input was 38.
+# Queue 0 has   8 items, out of  39 total.
+# Enqueueing to linked list 2, input was 39.
+# Queue 2 has  14 items, out of  40 total.
+# Enqueueing to linked list 3, input was 40.
+# Queue 3 has  10 items, out of  41 total.
+# Enqueueing to linked list 2, input was 41.
+# Queue 2 has  15 items, out of  42 total.
+# Enqueueing to linked list 2, input was 42.
+# Queue 2 has  16 items, out of  43 total.
+# Enqueueing to linked list 2, input was 43.
+# Queue 2 has  17 items, out of  44 total.
+# Enqueueing to linked list 0, input was 44.
+# Queue 0 has   9 items, out of  45 total.
+# Enqueueing to linked list 3, input was 45.
+# Queue 3 has  11 items, out of  46 total.
+# Enqueueing to linked list 3, input was 46.
+# Queue 3 has  12 items, out of  47 total.
+# Enqueueing to linked list 3, input was 47.
+# Queue 3 has  13 items, out of  48 total.
+# Enqueueing to linked list 0, input was 48.
+# Queue 0 has  10 items, out of  49 total.
+# Enqueueing to linked list 2, input was 49.
+# Queue 2 has  18 items, out of  50 total.
+# Enqueueing to linked list 0, input was 50.
+# Queue 0 has  11 items, out of  51 total.
+# Enqueueing to linked list 3, input was 51.
+# Queue 3 has  14 items, out of  52 total.
+# Enqueueing to linked list 1, input was 52.
+# Queue 1 has  10 items, out of  53 total.
+# Enqueueing to linked list 0, input was 53.
+# Queue 0 has  12 items, out of  54 total.
+# Enqueueing to linked list 1, input was 54.
+# Queue 1 has  11 items, out of  55 total.
+# Enqueueing to linked list 1, input was 55.
+# Queue 1 has  12 items, out of  56 total.
+# Enqueueing to linked list 3, input was 56.
+# Queue 3 has  15 items, out of  57 total.
+# Enqueueing to linked list 1, input was 57.
+# Queue 1 has  13 items, out of  58 total.
+# Enqueueing to linked list 2, input was 58.
+# Queue 2 has  19 items, out of  59 total.
+# Enqueueing to linked list 1, input was 59.
+# Queue 1 has  14 items, out of  60 total.
+# Enqueueing to linked list 0, input was 60.
+# Queue 0 has  13 items, out of  61 total.
+# Enqueueing to linked list 0, input was 61.
+# Queue 0 has  14 items, out of  62 total.
+# Enqueueing to linked list 0, input was 62.
+# Queue 0 has  15 items, out of  63 total.
+# Enqueueing to linked list 3, input was 63.
+# Queue 3 has  16 items, out of  64 total.
+# Successfully enqueued all items!
+# Queue 1 has  13 items, out of  63 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 2 has  18 items, out of  62 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 0 has  14 items, out of  61 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has  13 items, out of  60 total.
+# Queue 0 has  12 items, out of  59 total.
+# Dequeued from linked list 0, output was  x.
+# Dequeued from linked list 0, output was  x.
+# Queue 2 has  17 items, out of  58 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 2 has  16 items, out of  57 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 0 has  11 items, out of  56 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 3 has  15 items, out of  55 total.
+# Queue 2 has  15 items, out of  54 total.
+# Dequeued from linked list 3, output was  x.
+# Dequeued from linked list 2, output was  x.
+# Queue 0 has  10 items, out of  53 total.
+# Queue 2 has  14 items, out of  52 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 1 has  12 items, out of  51 total.
+# Dequeued from linked list 2, output was  x.
+# Dequeued from linked list 1, output was  x.
+# Queue 2 has  13 items, out of  50 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 3 has  14 items, out of  49 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 1 has  11 items, out of  48 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 1 has  10 items, out of  47 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 3 has  13 items, out of  46 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 1 has   9 items, out of  45 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 0 has   9 items, out of  44 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 2 has  12 items, out of  43 total.
+# Queue 0 has   8 items, out of  42 total.
+# Dequeued from linked list 2, output was  x.
+# Dequeued from linked list 0, output was  x.
+# Queue 1 has   8 items, out of  41 total.
+# Queue 1 has   7 items, out of  40 total.
+# Dequeued from linked list 1, output was  x.
+# Dequeued from linked list 1, output was  x.
+# Queue 3 has  12 items, out of  39 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 0 has   7 items, out of  38 total.
+# Queue 3 has  11 items, out of  37 total.
+# Dequeued from linked list 0, output was  x.
+# Dequeued from linked list 3, output was  x.
+# Queue 2 has  11 items, out of  36 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 2 has  10 items, out of  35 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 1 has   6 items, out of  34 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 3 has  10 items, out of  33 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 3 has   9 items, out of  32 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 3 has   8 items, out of  31 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 2 has   9 items, out of  30 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 0 has   6 items, out of  29 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 3 has   7 items, out of  28 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 1 has   5 items, out of  27 total.
+# Queue 3 has   6 items, out of  26 total.
+# Dequeued from linked list 1, output was  x.
+# Dequeued from linked list 3, output was  x.
+# Queue 0 has   5 items, out of  25 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   4 items, out of  24 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   3 items, out of  23 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 0 has   2 items, out of  22 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 3 has   5 items, out of  21 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 2 has   8 items, out of  20 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 1 has   4 items, out of  19 total.
+# Queue 1 has   3 items, out of  18 total.
+# Dequeued from linked list 1, output was  x.
+# Dequeued from linked list 1, output was  x.
+# Queue 0 has   1 items, out of  17 total.
+# Dequeued from linked list 0, output was  x.
+# Queue 1 has   2 items, out of  16 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 1 has   1 items, out of  15 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 0 has   0 items, out of  14 total.
+run
+# Dequeued from linked list 0, output was  x.
+# Queue 2 has   7 items, out of  13 total.
+# Queue 3 has   4 items, out of  12 total.
+# Dequeued from linked list 2, output was  x.
+# Dequeued from linked list 3, output was  x.
+# Queue 3 has   3 items, out of  11 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 1 has   0 items, out of  10 total.
+# Dequeued from linked list 1, output was  x.
+# Queue 3 has   2 items, out of   9 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 2 has   6 items, out of   8 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 2 has   5 items, out of   7 total.
+# Queue 2 has   4 items, out of   6 total.
+# Dequeued from linked list 2, output was  x.
+# Queue 3 has   1 items, out of   5 total.
+# Dequeued from linked list 2, output was  x.
+# Dequeued from linked list 3, output was  x.
+# Queue 2 has   3 items, out of   4 total.
+# Queue 2 has   2 items, out of   3 total.
+# Dequeued from linked list 2, output was  x.
+# Dequeued from linked list 2, output was  x.
+# Queue 3 has   0 items, out of   2 total.
+# Dequeued from linked list 3, output was  x.
+# Queue 2 has   1 items, out of   1 total.
+# Queue 2 has   0 items, out of   0 total.
+# Dequeued from linked list 2, output was  x.
+# Dequeued from linked list 2, output was  x.
+# Items still remaining! Addr_vec is 1111111111111111111111111111111111111111111111111111111111111111
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv(260)
+#    Time: 21240 ns  Iteration: 0  Instance: /tb_linked_list
+# Break in Module tb_linked_list at C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv line 260
+run
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/linked_list.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:33:13 on Sep 15,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/linked_list.sv 
+# -- Compiling module linked_list
+# 
+# Top level modules:
+# 	linked_list
+# End time: 20:33:13 on Sep 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.linked_list
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Finished init.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   1 items, out of   1 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Queue 0 has   0 items, out of   0 total.
+# Dequeued from linked list 0, output was  1.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  2.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   2 items, out of   2 total.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   3 items, out of   3 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   4 items, out of   4 total.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has   5 items, out of   5 total.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has   6 items, out of   6 total.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has   7 items, out of   7 total.
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has   8 items, out of   8 total.
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has   9 items, out of   9 total.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has  10 items, out of  10 total.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has  11 items, out of  11 total.
+# Enqueueing to linked list 1, input was 40.
+# Queue 1 has   1 items, out of  12 total.
+# Enqueueing to linked list 1, input was 63.
+# Queue 1 has   2 items, out of  13 total.
+# Enqueueing to linked list 1, input was 62.
+# Queue 1 has   3 items, out of  14 total.
+# Enqueueing to linked list 1, input was 61.
+# Queue 1 has   4 items, out of  15 total.
+# Enqueueing to linked list 1, input was 60.
+# Queue 1 has   5 items, out of  16 total.
+# Enqueueing to linked list 1, input was 59.
+# Queue 1 has   6 items, out of  17 total.
+# Enqueueing to linked list 1, input was 58.
+# Queue 1 has   7 items, out of  18 total.
+# Enqueueing to linked list 1, input was 57.
+# Queue 1 has   8 items, out of  19 total.
+# Enqueueing to linked list 1, input was 56.
+# Queue 1 has   9 items, out of  20 total.
+# Enqueueing to linked list 1, input was 55.
+# Queue 1 has  10 items, out of  21 total.
+# Enqueueing to linked list 1, input was 54.
+# Queue 1 has  11 items, out of  22 total.
+# Enqueueing to linked list 1, input was 53.
+# Queue 1 has  12 items, out of  23 total.
+# Enqueueing to linked list 1, input was 52.
+# Queue 1 has  13 items, out of  24 total.
+# Enqueueing to linked list 1, input was 51.
+# Queue 1 has  14 items, out of  25 total.
+# Enqueueing to linked list 1, input was 50.
+# Queue 1 has  15 items, out of  26 total.
+# Enqueueing to linked list 1, input was 49.
+# Queue 1 has  16 items, out of  27 total.
+# Enqueueing to linked list 1, input was 48.
+# Queue 1 has  17 items, out of  28 total.
+# Enqueueing to linked list 1, input was 47.
+# Queue 1 has  18 items, out of  29 total.
+# Enqueueing to linked list 1, input was 46.
+# Queue 1 has  19 items, out of  30 total.
+# Enqueueing to linked list 1, input was 45.
+# Queue 1 has  20 items, out of  31 total.
+# Enqueueing to linked list 1, input was 44.
+# Queue 1 has  21 items, out of  32 total.
+# Enqueueing to linked list 0, input was 50.
+# Queue 0 has  12 items, out of  33 total.
+# Enqueueing to linked list 0, input was 30.
+# Queue 0 has  13 items, out of  34 total.
+# Enqueueing to linked list 0, input was 31.
+# Queue 0 has  14 items, out of  35 total.
+# Enqueueing to linked list 0, input was 32.
+# Queue 0 has  15 items, out of  36 total.
+# Enqueueing to linked list 0, input was 33.
+# Queue 0 has  16 items, out of  37 total.
+# Enqueueing to linked list 0, input was 34.
+# Queue 0 has  17 items, out of  38 total.
+# Enqueueing to linked list 0, input was 35.
+# Queue 0 has  18 items, out of  39 total.
+# Enqueueing to linked list 0, input was 36.
+# Queue 0 has  19 items, out of  40 total.
+# Enqueueing to linked list 0, input was 37.
+# Queue 0 has  20 items, out of  41 total.
+# Enqueueing to linked list 0, input was 38.
+# Queue 0 has  21 items, out of  42 total.
+# Enqueueing to linked list 0, input was 39.
+# Queue 0 has  22 items, out of  43 total.
+# Queue 1 has  20 items, out of  42 total.
+# Queue 1 has  19 items, out of  41 total.
+# Dequeued from linked list 1, output was 40.
+# Queue 1 has  18 items, out of  40 total.
+# Dequeued from linked list 1, output was 63.
+# Queue 1 has  17 items, out of  39 total.
+# Dequeued from linked list 1, output was 62.
+# Queue 1 has  16 items, out of  38 total.
+# Dequeued from linked list 1, output was 61.
+# Queue 1 has  15 items, out of  37 total.
+# Dequeued from linked list 1, output was 60.
+# Queue 1 has  14 items, out of  36 total.
+# Dequeued from linked list 1, output was 59.
+# Queue 1 has  13 items, out of  35 total.
+# Dequeued from linked list 1, output was 58.
+# Queue 1 has  12 items, out of  34 total.
+# Dequeued from linked list 1, output was 57.
+# Queue 1 has  11 items, out of  33 total.
+# Dequeued from linked list 1, output was 56.
+# Queue 1 has  10 items, out of  32 total.
+# Dequeued from linked list 1, output was 55.
+# Queue 1 has   9 items, out of  31 total.
+# Dequeued from linked list 1, output was 54.
+# Queue 1 has   8 items, out of  30 total.
+# Dequeued from linked list 1, output was 53.
+# Queue 1 has   7 items, out of  29 total.
+# Dequeued from linked list 1, output was 52.
+# Queue 1 has   6 items, out of  28 total.
+# Dequeued from linked list 1, output was 51.
+# Queue 1 has   5 items, out of  27 total.
+# Dequeued from linked list 1, output was 50.
+# Queue 1 has   4 items, out of  26 total.
+# Dequeued from linked list 1, output was 49.
+# Queue 1 has   3 items, out of  25 total.
+# Dequeued from linked list 1, output was 48.
+# Queue 1 has   2 items, out of  24 total.
+# Dequeued from linked list 1, output was 47.
+# Queue 1 has   1 items, out of  23 total.
+# Dequeued from linked list 1, output was 46.
+# Queue 1 has   0 items, out of  22 total.
+# Dequeued from linked list 1, output was 45.
+# Queue 0 has  21 items, out of  21 total.
+# Dequeued from linked list 1, output was 44.
+# Queue 0 has  20 items, out of  20 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has  19 items, out of  19 total.
+# Dequeued from linked list 0, output was  0.
+# Queue 0 has  18 items, out of  18 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has  17 items, out of  17 total.
+# Dequeued from linked list 0, output was  2.
+# Queue 0 has  16 items, out of  16 total.
+# Dequeued from linked list 0, output was  3.
+# Queue 0 has  15 items, out of  15 total.
+# Dequeued from linked list 0, output was  4.
+# Queue 0 has  14 items, out of  14 total.
+# Dequeued from linked list 0, output was  5.
+# Queue 0 has  13 items, out of  13 total.
+# Dequeued from linked list 0, output was  6.
+# Queue 0 has  12 items, out of  12 total.
+# Dequeued from linked list 0, output was  7.
+# Queue 0 has  11 items, out of  11 total.
+# Dequeued from linked list 0, output was  8.
+# Queue 0 has  10 items, out of  10 total.
+# Dequeued from linked list 0, output was  9.
+# Queue 0 has   9 items, out of   9 total.
+# Dequeued from linked list 0, output was 50.
+# Queue 0 has   8 items, out of   8 total.
+# Dequeued from linked list 0, output was 30.
+# Queue 0 has   7 items, out of   7 total.
+# Dequeued from linked list 0, output was 31.
+# Queue 0 has   6 items, out of   6 total.
+# Dequeued from linked list 0, output was 32.
+# Queue 0 has   5 items, out of   5 total.
+# Dequeued from linked list 0, output was 33.
+# Queue 0 has   4 items, out of   4 total.
+# Dequeued from linked list 0, output was 34.
+# Queue 0 has   3 items, out of   3 total.
+# Dequeued from linked list 0, output was 35.
+# Queue 0 has   2 items, out of   2 total.
+# Dequeued from linked list 0, output was 36.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was 37.
+# Queue 0 has   0 items, out of   0 total.
+# Dequeued from linked list 0, output was 38.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was 39.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   2 items, out of   2 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   3 items, out of   3 total.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has   4 items, out of   4 total.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has   5 items, out of   5 total.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has   6 items, out of   6 total.
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has   7 items, out of   7 total.
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has   8 items, out of   8 total.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has   9 items, out of   9 total.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has  10 items, out of  10 total.
+# Enqueueing to linked list 0, input was 10.
+# Queue 0 has  11 items, out of  11 total.
+# Enqueueing to linked list 0, input was 11.
+# Queue 0 has  12 items, out of  12 total.
+# Enqueueing to linked list 0, input was 12.
+# Queue 0 has  13 items, out of  13 total.
+# Enqueueing to linked list 0, input was 13.
+# Queue 0 has  14 items, out of  14 total.
+# Enqueueing to linked list 0, input was 14.
+# Queue 0 has  15 items, out of  15 total.
+# Enqueueing to linked list 0, input was 15.
+# Queue 0 has  16 items, out of  16 total.
+# Enqueueing to linked list 0, input was 16.
+# Queue 0 has  17 items, out of  17 total.
+# Enqueueing to linked list 0, input was 17.
+# Queue 0 has  18 items, out of  18 total.
+# Enqueueing to linked list 0, input was 18.
+# Queue 0 has  19 items, out of  19 total.
+# Enqueueing to linked list 0, input was 19.
+# Queue 0 has  20 items, out of  20 total.
+# Enqueueing to linked list 0, input was 20.
+# Queue 0 has  21 items, out of  21 total.
+# Enqueueing to linked list 0, input was 21.
+# Queue 0 has  22 items, out of  22 total.
+# Enqueueing to linked list 0, input was 22.
+# Queue 0 has  23 items, out of  23 total.
+# Enqueueing to linked list 0, input was 23.
+# Queue 0 has  24 items, out of  24 total.
+# Enqueueing to linked list 0, input was 24.
+# Queue 0 has  25 items, out of  25 total.
+# Enqueueing to linked list 0, input was 25.
+# Queue 0 has  26 items, out of  26 total.
+# Enqueueing to linked list 0, input was 26.
+# Queue 0 has  27 items, out of  27 total.
+# Enqueueing to linked list 0, input was 27.
+# Queue 0 has  28 items, out of  28 total.
+# Enqueueing to linked list 0, input was 28.
+# Queue 0 has  29 items, out of  29 total.
+# Enqueueing to linked list 0, input was 29.
+# Queue 0 has  30 items, out of  30 total.
+# Enqueueing to linked list 0, input was 30.
+# Queue 0 has  31 items, out of  31 total.
+# Enqueueing to linked list 0, input was 31.
+# Queue 0 has  32 items, out of  32 total.
+# Enqueueing to linked list 0, input was 32.
+# Queue 0 has  33 items, out of  33 total.
+# Enqueueing to linked list 0, input was 33.
+# Queue 0 has  34 items, out of  34 total.
+# Enqueueing to linked list 0, input was 34.
+# Queue 0 has  35 items, out of  35 total.
+# Enqueueing to linked list 0, input was 35.
+# Queue 0 has  36 items, out of  36 total.
+# Enqueueing to linked list 0, input was 36.
+# Queue 0 has  37 items, out of  37 total.
+# Enqueueing to linked list 0, input was 37.
+# Queue 0 has  38 items, out of  38 total.
+# Enqueueing to linked list 0, input was 38.
+# Queue 0 has  39 items, out of  39 total.
+# Enqueueing to linked list 0, input was 39.
+# Queue 0 has  40 items, out of  40 total.
+# Enqueueing to linked list 0, input was 40.
+# Queue 0 has  41 items, out of  41 total.
+# Enqueueing to linked list 0, input was 41.
+# Queue 0 has  42 items, out of  42 total.
+# Enqueueing to linked list 0, input was 42.
+# Queue 0 has  43 items, out of  43 total.
+# Enqueueing to linked list 0, input was 43.
+# Queue 0 has  44 items, out of  44 total.
+# Enqueueing to linked list 0, input was 44.
+# Queue 0 has  45 items, out of  45 total.
+# Enqueueing to linked list 0, input was 45.
+# Queue 0 has  46 items, out of  46 total.
+# Enqueueing to linked list 0, input was 46.
+# Queue 0 has  47 items, out of  47 total.
+# Enqueueing to linked list 0, input was 47.
+# Queue 0 has  48 items, out of  48 total.
+# Enqueueing to linked list 0, input was 48.
+# Queue 0 has  49 items, out of  49 total.
+# Enqueueing to linked list 0, input was 49.
+# Queue 0 has  50 items, out of  50 total.
+# Enqueueing to linked list 0, input was 50.
+# Queue 0 has  51 items, out of  51 total.
+# Enqueueing to linked list 0, input was 51.
+# Queue 0 has  52 items, out of  52 total.
+# Enqueueing to linked list 0, input was 52.
+# Queue 0 has  53 items, out of  53 total.
+# Enqueueing to linked list 0, input was 53.
+# Queue 0 has  54 items, out of  54 total.
+# Enqueueing to linked list 0, input was 54.
+# Queue 0 has  55 items, out of  55 total.
+# Enqueueing to linked list 0, input was 55.
+# Queue 0 has  56 items, out of  56 total.
+# Enqueueing to linked list 0, input was 56.
+# Queue 0 has  57 items, out of  57 total.
+# Enqueueing to linked list 0, input was 57.
+# Queue 0 has  58 items, out of  58 total.
+# Enqueueing to linked list 0, input was 58.
+# Queue 0 has  59 items, out of  59 total.
+# Enqueueing to linked list 0, input was 59.
+# Queue 0 has  60 items, out of  60 total.
+# Enqueueing to linked list 0, input was 60.
+# Queue 0 has  61 items, out of  61 total.
+# Enqueueing to linked list 0, input was 61.
+# Queue 0 has  62 items, out of  62 total.
+# Enqueueing to linked list 0, input was 62.
+# Queue 0 has  63 items, out of  63 total.
+# Enqueueing to linked list 0, input was 63.
+# Queue 0 has  64 items, out of  64 total.
+# Queue 0 has  63 items, out of  63 total.
+# Queue 0 has  62 items, out of  62 total.
+# Dequeued from linked list 0, output was  0.
+# Queue 0 has  61 items, out of  61 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has  60 items, out of  60 total.
+# Dequeued from linked list 0, output was  2.
+# Queue 0 has  59 items, out of  59 total.
+# Dequeued from linked list 0, output was  3.
+# Queue 0 has  58 items, out of  58 total.
+# Dequeued from linked list 0, output was  4.
+# Queue 0 has  57 items, out of  57 total.
+# Dequeued from linked list 0, output was  5.
+# Queue 0 has  56 items, out of  56 total.
+# Dequeued from linked list 0, output was  6.
+# Queue 0 has  55 items, out of  55 total.
+# Dequeued from linked list 0, output was  7.
+# Queue 0 has  54 items, out of  54 total.
+# Dequeued from linked list 0, output was  8.
+# Queue 0 has  53 items, out of  53 total.
+# Dequeued from linked list 0, output was  9.
+# Queue 0 has  52 items, out of  52 total.
+# Dequeued from linked list 0, output was 10.
+# Queue 0 has  51 items, out of  51 total.
+# Dequeued from linked list 0, output was 11.
+# Queue 0 has  50 items, out of  50 total.
+# Dequeued from linked list 0, output was 12.
+# Queue 0 has  49 items, out of  49 total.
+# Dequeued from linked list 0, output was 13.
+# Queue 0 has  48 items, out of  48 total.
+# Dequeued from linked list 0, output was 14.
+# Queue 0 has  47 items, out of  47 total.
+# Dequeued from linked list 0, output was 15.
+# Queue 0 has  46 items, out of  46 total.
+# Dequeued from linked list 0, output was 16.
+# Queue 0 has  45 items, out of  45 total.
+# Dequeued from linked list 0, output was 17.
+# Queue 0 has  44 items, out of  44 total.
+# Dequeued from linked list 0, output was 18.
+# Queue 0 has  43 items, out of  43 total.
+# Dequeued from linked list 0, output was 19.
+# Queue 0 has  42 items, out of  42 total.
+# Dequeued from linked list 0, output was 20.
+# Queue 0 has  41 items, out of  41 total.
+# Dequeued from linked list 0, output was 21.
+# Queue 0 has  40 items, out of  40 total.
+# Dequeued from linked list 0, output was 22.
+# Queue 0 has  39 items, out of  39 total.
+# Dequeued from linked list 0, output was 23.
+# Queue 0 has  38 items, out of  38 total.
+# Dequeued from linked list 0, output was 24.
+# Queue 0 has  37 items, out of  37 total.
+# Dequeued from linked list 0, output was 25.
+# Queue 0 has  36 items, out of  36 total.
+# Dequeued from linked list 0, output was 26.
+# Queue 0 has  35 items, out of  35 total.
+# Dequeued from linked list 0, output was 27.
+# Queue 0 has  34 items, out of  34 total.
+# Dequeued from linked list 0, output was 28.
+# Queue 0 has  33 items, out of  33 total.
+# Dequeued from linked list 0, output was 29.
+# Queue 0 has  32 items, out of  32 total.
+# Dequeued from linked list 0, output was 30.
+# Queue 0 has  31 items, out of  31 total.
+# Dequeued from linked list 0, output was 31.
+# Queue 0 has  30 items, out of  30 total.
+# Dequeued from linked list 0, output was 32.
+# Queue 0 has  29 items, out of  29 total.
+# Dequeued from linked list 0, output was 33.
+# Queue 0 has  28 items, out of  28 total.
+# Dequeued from linked list 0, output was 34.
+# Queue 0 has  27 items, out of  27 total.
+# Dequeued from linked list 0, output was 35.
+# Queue 0 has  26 items, out of  26 total.
+# Dequeued from linked list 0, output was 36.
+# Queue 0 has  25 items, out of  25 total.
+# Dequeued from linked list 0, output was 37.
+# Queue 0 has  24 items, out of  24 total.
+# Dequeued from linked list 0, output was 38.
+# Queue 0 has  23 items, out of  23 total.
+# Dequeued from linked list 0, output was 39.
+# Queue 0 has  22 items, out of  22 total.
+# Dequeued from linked list 0, output was 40.
+# Queue 0 has  21 items, out of  21 total.
+# Dequeued from linked list 0, output was 41.
+# Queue 0 has  20 items, out of  20 total.
+# Dequeued from linked list 0, output was 42.
+# Queue 0 has  19 items, out of  19 total.
+# Dequeued from linked list 0, output was 43.
+# Queue 0 has  18 items, out of  18 total.
+# Dequeued from linked list 0, output was 44.
+# Queue 0 has  17 items, out of  17 total.
+# Dequeued from linked list 0, output was 45.
+# Queue 0 has  16 items, out of  16 total.
+# Dequeued from linked list 0, output was 46.
+# Queue 0 has  15 items, out of  15 total.
+# Dequeued from linked list 0, output was 47.
+# Queue 0 has  14 items, out of  14 total.
+# Dequeued from linked list 0, output was 48.
+# Queue 0 has  13 items, out of  13 total.
+# Dequeued from linked list 0, output was 49.
+# Queue 0 has  12 items, out of  12 total.
+# Dequeued from linked list 0, output was 50.
+# Queue 0 has  11 items, out of  11 total.
+# Dequeued from linked list 0, output was 51.
+# Queue 0 has  10 items, out of  10 total.
+# Dequeued from linked list 0, output was 52.
+# Queue 0 has   9 items, out of   9 total.
+# Dequeued from linked list 0, output was 53.
+# Queue 0 has   8 items, out of   8 total.
+# Dequeued from linked list 0, output was 54.
+# Queue 0 has   7 items, out of   7 total.
+# Dequeued from linked list 0, output was 55.
+# Queue 0 has   6 items, out of   6 total.
+# Dequeued from linked list 0, output was 56.
+# Queue 0 has   5 items, out of   5 total.
+# Dequeued from linked list 0, output was 57.
+# Queue 0 has   4 items, out of   4 total.
+# Dequeued from linked list 0, output was 58.
+# Queue 0 has   3 items, out of   3 total.
+# Dequeued from linked list 0, output was 59.
+# Queue 0 has   2 items, out of   2 total.
+# Dequeued from linked list 0, output was 60.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was 61.
+# Queue 0 has   0 items, out of   0 total.
+run
+# Dequeued from linked list 0, output was 62.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was 63.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  0.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  1.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  2.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  3.
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  4.
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  5.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  6.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has   2 items, out of   2 total.
+# Queue 0 has   1 items, out of   1 total.
+# Dequeued from linked list 0, output was  7.
+# Finished loop.
+# Queue 0 has   0 items, out of   0 total.
+# Dequeued from linked list 0, output was  8.
+# Dequeued from linked list 0, output was  9.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has   1 items, out of   1 total.
+# Enqueueing to linked list 2, input was  1.
+# Queue 2 has   1 items, out of   2 total.
+# Enqueueing to linked list 2, input was  2.
+# Queue 2 has   2 items, out of   3 total.
+# Enqueueing to linked list 2, input was  3.
+# Queue 2 has   3 items, out of   4 total.
+# Enqueueing to linked list 3, input was  4.
+# Queue 3 has   1 items, out of   5 total.
+# Enqueueing to linked list 2, input was  5.
+# Queue 2 has   4 items, out of   6 total.
+# Enqueueing to linked list 3, input was  6.
+# Queue 3 has   2 items, out of   7 total.
+# Enqueueing to linked list 1, input was  7.
+# Queue 1 has   1 items, out of   8 total.
+# Enqueueing to linked list 2, input was  8.
+# Queue 2 has   5 items, out of   9 total.
+# Enqueueing to linked list 3, input was  9.
+# Queue 3 has   3 items, out of  10 total.
+# Enqueueing to linked list 3, input was 10.
+# Queue 3 has   4 items, out of  11 total.
+# Enqueueing to linked list 1, input was 11.
+# Queue 1 has   2 items, out of  12 total.
+# Enqueueing to linked list 1, input was 12.
+# Queue 1 has   3 items, out of  13 total.
+# Enqueueing to linked list 1, input was 13.
+# Queue 1 has   4 items, out of  14 total.
+# Enqueueing to linked list 0, input was 14.
+# Queue 0 has   2 items, out of  15 total.
+# Enqueueing to linked list 2, input was 15.
+# Queue 2 has   6 items, out of  16 total.
+# Enqueueing to linked list 1, input was 16.
+# Queue 1 has   5 items, out of  17 total.
+# Enqueueing to linked list 0, input was 17.
+# Queue 0 has   3 items, out of  18 total.
+# Enqueueing to linked list 0, input was 18.
+# Queue 0 has   4 items, out of  19 total.
+# Enqueueing to linked list 0, input was 19.
+# Queue 0 has   5 items, out of  20 total.
+# Enqueueing to linked list 1, input was 20.
+# Queue 1 has   6 items, out of  21 total.
+# Enqueueing to linked list 0, input was 21.
+# Queue 0 has   6 items, out of  22 total.
+# Enqueueing to linked list 2, input was 22.
+# Queue 2 has   7 items, out of  23 total.
+# Enqueueing to linked list 0, input was 23.
+# Queue 0 has   7 items, out of  24 total.
+# Enqueueing to linked list 2, input was 24.
+# Queue 2 has   8 items, out of  25 total.
+# Enqueueing to linked list 2, input was 25.
+# Queue 2 has   9 items, out of  26 total.
+# Enqueueing to linked list 2, input was 26.
+# Queue 2 has  10 items, out of  27 total.
+# Enqueueing to linked list 3, input was 27.
+# Queue 3 has   5 items, out of  28 total.
+# Enqueueing to linked list 1, input was 28.
+# Queue 1 has   7 items, out of  29 total.
+# Enqueueing to linked list 3, input was 29.
+# Queue 3 has   6 items, out of  30 total.
+# Enqueueing to linked list 2, input was 30.
+# Queue 2 has  11 items, out of  31 total.
+# Enqueueing to linked list 1, input was 31.
+# Queue 1 has   8 items, out of  32 total.
+# Enqueueing to linked list 2, input was 32.
+# Queue 2 has  12 items, out of  33 total.
+# Enqueueing to linked list 2, input was 33.
+# Queue 2 has  13 items, out of  34 total.
+# Enqueueing to linked list 3, input was 34.
+# Queue 3 has   7 items, out of  35 total.
+# Enqueueing to linked list 1, input was 35.
+# Queue 1 has   9 items, out of  36 total.
+# Enqueueing to linked list 3, input was 36.
+# Queue 3 has   8 items, out of  37 total.
+# Enqueueing to linked list 3, input was 37.
+# Queue 3 has   9 items, out of  38 total.
+# Enqueueing to linked list 0, input was 38.
+# Queue 0 has   8 items, out of  39 total.
+# Enqueueing to linked list 2, input was 39.
+# Queue 2 has  14 items, out of  40 total.
+# Enqueueing to linked list 3, input was 40.
+# Queue 3 has  10 items, out of  41 total.
+# Enqueueing to linked list 2, input was 41.
+# Queue 2 has  15 items, out of  42 total.
+# Enqueueing to linked list 2, input was 42.
+# Queue 2 has  16 items, out of  43 total.
+# Enqueueing to linked list 2, input was 43.
+# Queue 2 has  17 items, out of  44 total.
+# Enqueueing to linked list 0, input was 44.
+# Queue 0 has   9 items, out of  45 total.
+# Enqueueing to linked list 3, input was 45.
+# Queue 3 has  11 items, out of  46 total.
+# Enqueueing to linked list 3, input was 46.
+# Queue 3 has  12 items, out of  47 total.
+# Enqueueing to linked list 3, input was 47.
+# Queue 3 has  13 items, out of  48 total.
+# Enqueueing to linked list 0, input was 48.
+# Queue 0 has  10 items, out of  49 total.
+# Enqueueing to linked list 2, input was 49.
+# Queue 2 has  18 items, out of  50 total.
+# Enqueueing to linked list 0, input was 50.
+# Queue 0 has  11 items, out of  51 total.
+# Enqueueing to linked list 3, input was 51.
+# Queue 3 has  14 items, out of  52 total.
+# Enqueueing to linked list 1, input was 52.
+# Queue 1 has  10 items, out of  53 total.
+# Enqueueing to linked list 0, input was 53.
+# Queue 0 has  12 items, out of  54 total.
+# Enqueueing to linked list 1, input was 54.
+# Queue 1 has  11 items, out of  55 total.
+# Enqueueing to linked list 1, input was 55.
+# Queue 1 has  12 items, out of  56 total.
+# Enqueueing to linked list 3, input was 56.
+# Queue 3 has  15 items, out of  57 total.
+# Enqueueing to linked list 1, input was 57.
+# Queue 1 has  13 items, out of  58 total.
+# Enqueueing to linked list 2, input was 58.
+# Queue 2 has  19 items, out of  59 total.
+# Enqueueing to linked list 1, input was 59.
+# Queue 1 has  14 items, out of  60 total.
+# Enqueueing to linked list 0, input was 60.
+# Queue 0 has  13 items, out of  61 total.
+# Enqueueing to linked list 0, input was 61.
+# Queue 0 has  14 items, out of  62 total.
+# Enqueueing to linked list 0, input was 62.
+# Queue 0 has  15 items, out of  63 total.
+# Enqueueing to linked list 3, input was 63.
+# Queue 3 has  16 items, out of  64 total.
+# Successfully enqueued all items!
+# Queue 1 has  13 items, out of  63 total.
+# Dequeued from linked list 1, output was  7.
+# Queue 2 has  18 items, out of  62 total.
+# Dequeued from linked list 2, output was  1.
+# Queue 0 has  14 items, out of  61 total.
+# Dequeued from linked list 0, output was  0.
+# Queue 0 has  13 items, out of  60 total.
+# Queue 0 has  12 items, out of  59 total.
+# Dequeued from linked list 0, output was 14.
+# Dequeued from linked list 0, output was 17.
+# Queue 2 has  17 items, out of  58 total.
+# Dequeued from linked list 2, output was  2.
+# Queue 2 has  16 items, out of  57 total.
+# Dequeued from linked list 2, output was  3.
+# Queue 0 has  11 items, out of  56 total.
+# Dequeued from linked list 0, output was 18.
+# Queue 3 has  15 items, out of  55 total.
+# Queue 2 has  15 items, out of  54 total.
+# Dequeued from linked list 3, output was  4.
+# Dequeued from linked list 2, output was  5.
+# Queue 0 has  10 items, out of  53 total.
+# Queue 2 has  14 items, out of  52 total.
+# Dequeued from linked list 0, output was 19.
+# Queue 1 has  12 items, out of  51 total.
+# Dequeued from linked list 2, output was  8.
+# Dequeued from linked list 1, output was 11.
+# Queue 2 has  13 items, out of  50 total.
+# Dequeued from linked list 2, output was 15.
+# Queue 3 has  14 items, out of  49 total.
+# Dequeued from linked list 3, output was  6.
+# Queue 1 has  11 items, out of  48 total.
+# Dequeued from linked list 1, output was 12.
+# Queue 1 has  10 items, out of  47 total.
+# Dequeued from linked list 1, output was 13.
+# Queue 3 has  13 items, out of  46 total.
+# Dequeued from linked list 3, output was  9.
+# Queue 1 has   9 items, out of  45 total.
+# Dequeued from linked list 1, output was 16.
+# Queue 0 has   9 items, out of  44 total.
+# Dequeued from linked list 0, output was 21.
+# Queue 2 has  12 items, out of  43 total.
+# Queue 0 has   8 items, out of  42 total.
+# Dequeued from linked list 2, output was 22.
+# Dequeued from linked list 0, output was 23.
+# Queue 1 has   8 items, out of  41 total.
+# Queue 1 has   7 items, out of  40 total.
+# Dequeued from linked list 1, output was 20.
+# Dequeued from linked list 1, output was 28.
+# Queue 3 has  12 items, out of  39 total.
+# Dequeued from linked list 3, output was 10.
+# Queue 0 has   7 items, out of  38 total.
+# Queue 3 has  11 items, out of  37 total.
+# Dequeued from linked list 0, output was 38.
+# Dequeued from linked list 3, output was 27.
+# Queue 2 has  11 items, out of  36 total.
+# Dequeued from linked list 2, output was 24.
+# Queue 2 has  10 items, out of  35 total.
+# Dequeued from linked list 2, output was 25.
+# Queue 1 has   6 items, out of  34 total.
+# Dequeued from linked list 1, output was 31.
+# Queue 3 has  10 items, out of  33 total.
+# Dequeued from linked list 3, output was 29.
+# Queue 3 has   9 items, out of  32 total.
+# Dequeued from linked list 3, output was 34.
+# Queue 3 has   8 items, out of  31 total.
+# Dequeued from linked list 3, output was 36.
+# Queue 2 has   9 items, out of  30 total.
+# Dequeued from linked list 2, output was 26.
+# Queue 0 has   6 items, out of  29 total.
+# Dequeued from linked list 0, output was 44.
+# Queue 3 has   7 items, out of  28 total.
+# Dequeued from linked list 3, output was 37.
+# Queue 1 has   5 items, out of  27 total.
+# Queue 3 has   6 items, out of  26 total.
+# Dequeued from linked list 1, output was 35.
+# Dequeued from linked list 3, output was 40.
+# Queue 0 has   5 items, out of  25 total.
+# Dequeued from linked list 0, output was 48.
+# Queue 0 has   4 items, out of  24 total.
+# Dequeued from linked list 0, output was 50.
+# Queue 0 has   3 items, out of  23 total.
+# Dequeued from linked list 0, output was 53.
+# Queue 0 has   2 items, out of  22 total.
+# Dequeued from linked list 0, output was 60.
+# Queue 3 has   5 items, out of  21 total.
+# Dequeued from linked list 3, output was 45.
+# Queue 2 has   8 items, out of  20 total.
+# Dequeued from linked list 2, output was 30.
+# Queue 1 has   4 items, out of  19 total.
+# Queue 1 has   3 items, out of  18 total.
+# Dequeued from linked list 1, output was 52.
+# Dequeued from linked list 1, output was 54.
+# Queue 0 has   1 items, out of  17 total.
+# Dequeued from linked list 0, output was 61.
+# Queue 1 has   2 items, out of  16 total.
+# Dequeued from linked list 1, output was 55.
+# Queue 1 has   1 items, out of  15 total.
+# Dequeued from linked list 1, output was 57.
+# Queue 0 has   0 items, out of  14 total.
+run
+# Dequeued from linked list 0, output was 62.
+# Queue 2 has   7 items, out of  13 total.
+# Queue 3 has   4 items, out of  12 total.
+# Dequeued from linked list 2, output was 32.
+# Dequeued from linked list 3, output was 46.
+# Queue 3 has   3 items, out of  11 total.
+# Dequeued from linked list 3, output was 47.
+# Queue 1 has   0 items, out of  10 total.
+# Dequeued from linked list 1, output was 59.
+# Queue 3 has   2 items, out of   9 total.
+# Dequeued from linked list 3, output was 51.
+# Queue 2 has   6 items, out of   8 total.
+# Dequeued from linked list 2, output was 33.
+# Queue 2 has   5 items, out of   7 total.
+# Queue 2 has   4 items, out of   6 total.
+# Dequeued from linked list 2, output was 39.
+# Queue 3 has   1 items, out of   5 total.
+# Dequeued from linked list 2, output was 41.
+# Dequeued from linked list 3, output was 56.
+# Queue 2 has   3 items, out of   4 total.
+# Queue 2 has   2 items, out of   3 total.
+# Dequeued from linked list 2, output was 42.
+# Dequeued from linked list 2, output was 43.
+# Queue 3 has   0 items, out of   2 total.
+# Dequeued from linked list 3, output was 63.
+# Queue 2 has   1 items, out of   1 total.
+# Queue 2 has   0 items, out of   0 total.
+# Dequeued from linked list 2, output was 49.
+# Dequeued from linked list 2, output was 58.
+# Successfully dequeued all items.
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv(260)
+#    Time: 21240 ns  Iteration: 0  Instance: /tb_linked_list
+# Break in Module tb_linked_list at C:/Users/danie/Desktop/Code/linked_list/tb_linked_list.sv line 260
+run
+# Load canceled
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:34:57 on Sep 15,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv 
+# -- Compiling module tb_rand_serial_ll
+# 
+# Top level modules:
+# 	tb_rand_serial_ll
+# End time: 20:34:57 on Sep 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_rand_serial_ll
+# End time: 20:35:06 on Sep 15,2024, Elapsed time: 0:10:52
+# Errors: 0, Warnings: 0
+# vsim work.tb_rand_serial_ll 
+# Start time: 20:35:06 on Sep 15,2024
+# Loading sv_std.std
+# Loading work.tb_rand_serial_ll
+# Loading work.linked_list
+# Loading work.memory
+run
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Finished init.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has  1 items, out of  1 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Queue 0 has  0 items, out of  0 total.
+# Dequeued from linked list 0, output was  1.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  2.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has  2 items, out of  2 total.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has  3 items, out of  3 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has  4 items, out of  4 total.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has  5 items, out of  5 total.
+# Queue 0 has  4 items, out of  4 total.
+# Queue 0 has  3 items, out of  3 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has  2 items, out of  2 total.
+# Dequeued from linked list 0, output was  0.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has  0 items, out of  0 total.
+# Dequeued from linked list 0, output was  2.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  3.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has  2 items, out of  2 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has  3 items, out of  3 total.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has  4 items, out of  4 total.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has  5 items, out of  5 total.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has  6 items, out of  6 total.
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has  7 items, out of  7 total.
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has  8 items, out of  8 total.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has  9 items, out of  9 total.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has 10 items, out of 10 total.
+# Enqueueing to linked list 0, input was 10.
+# Queue 0 has 11 items, out of 11 total.
+# Enqueueing to linked list 0, input was 11.
+# Queue 0 has 12 items, out of 12 total.
+# Enqueueing to linked list 0, input was 12.
+# Queue 0 has 13 items, out of 13 total.
+# Enqueueing to linked list 0, input was 13.
+# Queue 0 has 14 items, out of 14 total.
+# Enqueueing to linked list 0, input was 14.
+# Queue 0 has 15 items, out of 15 total.
+# Enqueueing to linked list 0, input was 15.
+# Queue 0 has 16 items, out of 16 total.
+# Queue 0 has 15 items, out of 15 total.
+# Queue 0 has 14 items, out of 14 total.
+# Dequeued from linked list 0, output was  0.
+# Queue 0 has 13 items, out of 13 total.
+# Dequeued from linked list 0, output was  1.
+# Queue 0 has 12 items, out of 12 total.
+# Dequeued from linked list 0, output was  2.
+# Queue 0 has 11 items, out of 11 total.
+# Dequeued from linked list 0, output was  3.
+# Queue 0 has 10 items, out of 10 total.
+# Dequeued from linked list 0, output was  4.
+# Queue 0 has  9 items, out of  9 total.
+# Dequeued from linked list 0, output was  5.
+# Queue 0 has  8 items, out of  8 total.
+# Dequeued from linked list 0, output was  6.
+# Queue 0 has  7 items, out of  7 total.
+# Dequeued from linked list 0, output was  7.
+# Queue 0 has  6 items, out of  6 total.
+# Dequeued from linked list 0, output was  8.
+# Queue 0 has  5 items, out of  5 total.
+# Dequeued from linked list 0, output was  9.
+# Queue 0 has  4 items, out of  4 total.
+# Dequeued from linked list 0, output was 10.
+# Queue 0 has  3 items, out of  3 total.
+# Dequeued from linked list 0, output was 11.
+# Queue 0 has  2 items, out of  2 total.
+# Dequeued from linked list 0, output was 12.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was 13.
+# Queue 0 has  0 items, out of  0 total.
+# Dequeued from linked list 0, output was 14.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was 15.
+# Enqueueing to linked list 0, input was  1.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Enqueueing to linked list 0, input was  2.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  0.
+# Enqueueing to linked list 0, input was  3.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  1.
+# Enqueueing to linked list 0, input was  4.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  2.
+# Enqueueing to linked list 0, input was  5.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  3.
+# Enqueueing to linked list 0, input was  6.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  4.
+# Enqueueing to linked list 0, input was  7.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  5.
+# Enqueueing to linked list 0, input was  8.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  6.
+# Enqueueing to linked list 0, input was  9.
+# Queue 0 has  2 items, out of  2 total.
+# Queue 0 has  1 items, out of  1 total.
+# Dequeued from linked list 0, output was  7.
+# Finished loop.
+# Queue 0 has  0 items, out of  0 total.
+# Dequeued from linked list 0, output was  8.
+# Dequeued from linked list 0, output was  9.
+# Enqueueing to linked list 0, input was  0.
+# Queue 0 has  1 items, out of  1 total.
+# Enqueueing to linked list 2, input was  1.
+# Queue 2 has  1 items, out of  2 total.
+# Enqueueing to linked list 2, input was  2.
+# Queue 2 has  2 items, out of  3 total.
+# Enqueueing to linked list 2, input was  3.
+# Queue 2 has  3 items, out of  4 total.
+# Enqueueing to linked list 3, input was  4.
+# Queue 3 has  1 items, out of  5 total.
+# Enqueueing to linked list 2, input was  5.
+# Queue 2 has  4 items, out of  6 total.
+# Enqueueing to linked list 3, input was  6.
+# Queue 3 has  2 items, out of  7 total.
+# Enqueueing to linked list 1, input was  7.
+# Queue 1 has  1 items, out of  8 total.
+# Enqueueing to linked list 2, input was  8.
+# Queue 2 has  5 items, out of  9 total.
+# Enqueueing to linked list 3, input was  9.
+# Queue 3 has  3 items, out of 10 total.
+# Enqueueing to linked list 3, input was 10.
+# Queue 3 has  4 items, out of 11 total.
+# Enqueueing to linked list 1, input was 11.
+# Queue 1 has  2 items, out of 12 total.
+# Enqueueing to linked list 1, input was 12.
+# Queue 1 has  3 items, out of 13 total.
+# Enqueueing to linked list 1, input was 13.
+# Queue 1 has  4 items, out of 14 total.
+# Enqueueing to linked list 0, input was 14.
+# Queue 0 has  2 items, out of 15 total.
+# Enqueueing to linked list 2, input was 15.
+# Queue 2 has  6 items, out of 16 total.
+# Items still not enqueued. Addr_vec is 1111111111111111
+# Queue 1 has  3 items, out of 15 total.
+# Dequeued from linked list 1, output was  7.
+# Queue 0 has  1 items, out of 14 total.
+# Queue 0 has  0 items, out of 13 total.
+# Dequeued from linked list 0, output was  0.
+# Dequeued from linked list 0, output was 14.
+# Queue 3 has  3 items, out of 12 total.
+# Dequeued from linked list 3, output was  4.
+# Queue 3 has  2 items, out of 11 total.
+# Dequeued from linked list 3, output was  6.
+# Queue 1 has  2 items, out of 10 total.
+# Dequeued from linked list 1, output was 11.
+# Queue 3 has  1 items, out of  9 total.
+# Dequeued from linked list 3, output was  9.
+# Queue 3 has  0 items, out of  8 total.
+# Queue 2 has  5 items, out of  7 total.
+# Dequeued from linked list 3, output was 10.
+# Dequeued from linked list 2, output was  1.
+# Queue 1 has  1 items, out of  6 total.
+# Dequeued from linked list 1, output was 12.
+# Queue 1 has  0 items, out of  5 total.
+# Dequeued from linked list 1, output was 13.
+# Queue 2 has  4 items, out of  4 total.
+# Queue 2 has  3 items, out of  3 total.
+# Dequeued from linked list 2, output was  2.
+# Queue 2 has  2 items, out of  2 total.
+# Dequeued from linked list 2, output was  3.
+# Dequeued from linked list 2, output was  5.
+# Queue 2 has  1 items, out of  1 total.
+# Dequeued from linked list 2, output was  8.
+# Queue 2 has  0 items, out of  0 total.
+# Dequeued from linked list 2, output was 15.
+# Successfully dequeued all items.
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv(200)
+#    Time: 5380 ns  Iteration: 0  Instance: /tb_rand_serial_ll
+# Break in Module tb_rand_serial_ll at C:/Users/danie/Desktop/Code/linked_list/tb_rand_serial_ll.sv line 200
+vsim work.tb_rand_parallel_ll
+# End time: 20:35:32 on Sep 15,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0
+# vsim work.tb_rand_parallel_ll 
+# Start time: 20:35:32 on Sep 15,2024
+# Loading sv_std.std
+# Loading work.tb_rand_parallel_ll
+# Loading work.linked_list
+# Loading work.memory
+run
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Waiting for init.
+# Finished init.
+# Dequeued from queue 2, output was 40. Correct!
+# Dequeued from queue 3, output was 29. Correct!
+# Dequeued from queue 0, output was  4. Correct!
+# Dequeued from queue 0, output was 55. Correct!
+# Dequeued from queue 3, output was 20. Correct!
+# Dequeued from queue 2, output was 41. Correct!
+# Dequeued from queue 0, output was 40. Correct!
+# Dequeued from queue 0, output was 42. Correct!
+# Dequeued from queue 1, output was  5. Correct!
+# Dequeued from queue 3, output was  0. Correct!
+# Dequeued from queue 2, output was 16. Correct!
+# Dequeued from queue 3, output was 27. Correct!
+# Dequeued from queue 2, output was  2. Correct!
+# Dequeued from queue 1, output was 26. Correct!
+# Dequeued from queue 0, output was 59. Correct!
+# Dequeued from queue 3, output was 29. Correct!
+# Dequeued from queue 1, output was 54. Correct!
+# Dequeued from queue 2, output was 52. Correct!
+# Dequeued from queue 1, output was 36. Correct!
+# Dequeued from queue 0, output was 21. Correct!
+# Dequeued from queue 0, output was 58. Correct!
+# Dequeued from queue 3, output was 44. Correct!
+# Dequeued from queue 3, output was 33. Correct!
+# Dequeued from queue 0, output was 22. Correct!
+# Dequeued from queue 3, output was  1. Correct!
+# Dequeued from queue 0, output was 15. Correct!
+# Dequeued from queue 0, output was 40. Correct!
+# Dequeued from queue 2, output was 35. Correct!
+# Dequeued from queue 1, output was 21. Correct!
+# Dequeued from queue 2, output was  0. Correct!
+# Dequeued from queue 0, output was  6. Correct!
+# Dequeued from queue 1, output was 11. Correct!
+# Dequeued from queue 2, output was 29. Correct!
+# Dequeued from queue 0, output was  2. Correct!
+# Dequeued from queue 0, output was  9. Correct!
+# Dequeued from queue 0, output was 23. Correct!
+# Dequeued from queue 3, output was 46. Correct!
+# Dequeued from queue 0, output was  5. Correct!
+# Dequeued from queue 1, output was 26. Correct!
+# Dequeued from queue 1, output was 27. Correct!
+# Dequeued from queue 2, output was 44. Correct!
+# Dequeued from queue 0, output was 31. Correct!
+# Dequeued from queue 3, output was 37. Correct!
+# Dequeued from queue 0, output was 42. Correct!
+# Dequeued from queue 3, output was  5. Correct!
+# Dequeued from queue 1, output was  0. Correct!
+# Dequeued from queue 1, output was 22. Correct!
+# Dequeued from queue 1, output was 42. Correct!
+# Dequeued from queue 0, output was 31. Correct!
+# Dequeued from queue 3, output was 45. Correct!
+# Dequeued from queue 2, output was 55. Correct!
+# Dequeued from queue 2, output was 27. Correct!
+# Dequeued from queue 0, output was 17. Correct!
+# Dequeued from queue 0, output was 27. Correct!
+# Dequeued from queue 1, output was 30. Correct!
+# Dequeued from queue 1, output was 58. Correct!
+# Dequeued from queue 3, output was  3. Correct!
+# Dequeued from queue 0, output was 25. Correct!
+# Dequeued from queue 1, output was 43. Correct!
+# Dequeued from queue 2, output was 38. Correct!
+# Dequeued from queue 2, output was  1. Correct!
+# Dequeued from queue 1, output was 58. Correct!
+# Dequeued from queue 0, output was 14. Correct!
+# Dequeued from queue 1, output was  8. Correct!
+# Dequeued from queue 1, output was 61. Correct!
+# Dequeued from queue 1, output was 45. Correct!
+# Dequeued from queue 3, output was 13. Correct!
+# Dequeued from queue 1, output was 56. Correct!
+# Dequeued from queue 2, output was 41. Correct!
+run
+# Dequeued from queue 2, output was 28. Correct!
+# Dequeued from queue 1, output was 29. Correct!
+# Dequeued from queue 0, output was 51. Correct!
+# Dequeued from queue 0, output was  3. Correct!
+# Dequeued from queue 2, output was 15. Correct!
+# Dequeued from queue 0, output was 23. Correct!
+# Dequeued from queue 3, output was 28. Correct!
+# Dequeued from queue 1, output was 18. Correct!
+# Dequeued from queue 0, output was 51. Correct!
+# Dequeued from queue 2, output was 10. Correct!
+# Dequeued from queue 0, output was  5. Correct!
+# Dequeued from queue 1, output was  4. Correct!
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv(97)
+#    Time: 11380 ns  Iteration: 0  Instance: /tb_rand_parallel_ll
+# Break in Module tb_rand_parallel_ll at C:/Users/danie/Desktop/Code/linked_list/tb_rand_parallel_ll.sv line 97
+# End time: 20:35:48 on Sep 15,2024, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 0

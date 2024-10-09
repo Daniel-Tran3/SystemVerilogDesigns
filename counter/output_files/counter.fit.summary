@@ -1,0 +1,22 @@
+Fitter Status : Successful - Thu Aug 01 16:07:52 2024
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : counter
+Top-level Entity Name : counter
+Family : Arria II GX
+Device : EP2AGX45CU17I3
+Timing Models : Final
+Logic utilization : 2 %
+    Combinational ALUTs : 260 / 36,100 ( < 1 % )
+    Memory ALUTs : 0 / 18,050 ( 0 % )
+    Dedicated logic registers : 480 / 36,100 ( 1 % )
+Total registers : 480
+Total pins : 40 / 176 ( 23 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 2,939,904 ( 0 % )
+DSP block 18-bit elements : 0 / 232 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 4 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,366 @@
+# Reading pref.tcl
+# do memory_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/danie/Desktop/Code/memory {C:/Users/danie/Desktop/Code/memory/memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:28:05 on Jul 07,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/danie/Desktop/Code/memory" C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# ** Error: C:/Users/danie/Desktop/Code/memory/memory.sv(9): (vlog-2730) Undefined variable: 'ADDR_WIDTH'.
+# ** Error (suppressible): C:/Users/danie/Desktop/Code/memory/memory.sv(9): (vlog-2388) 'w_addr' already declared in this scope (memory) at C:/Users/danie/Desktop/Code/memory/memory.sv(9).
+# ** Error: C:/Users/danie/Desktop/Code/memory/memory.sv(17): (vlog-13282) 'ADDR_WIDTH' already declared in this scope.
+# ** Error: C:/Users/danie/Desktop/Code/memory/memory.sv(9): (vlog-13294) Identifier must be declared with a port mode: w_addr.
+# End time: 16:28:05 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./memory_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/danie/Desktop/Code/memory {C:/Users/danie/Desktop/Code/memory/memory.sv}"
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:29:47 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:29:47 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:29:47 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# ** Error: C:/Users/danie/Desktop/Code/memory/tb_memory.sv(36): (vlog-2730) Undefined variable: 'w_data'.
+# End time: 16:29:47 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:30:13 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:30:13 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:30:13 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:30:13 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.tb_memory
+# vsim -gui -l msim_transcript work.tb_memory 
+# Start time: 16:30:23 on Jul 07,2024
+# Loading sv_std.std
+# Loading work.tb_memory
+# Loading work.memory
+add wave sim:/tb_memory/arb/*
+run
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:35:43 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:35:44 on Jul 07,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:35:44 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:35:44 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(54)
+#    Time: 200 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 54
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:37:31 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:37:31 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:37:31 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:37:31 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(54)
+#    Time: 200 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 54
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:38:45 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:38:45 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:38:45 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:38:45 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(54)
+#    Time: 220 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 54
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:40:16 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:40:16 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:40:16 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:40:16 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(54)
+#    Time: 220 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 54
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:41:13 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:41:13 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:41:13 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:41:13 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(54)
+#    Time: 220 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 54
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:41:58 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:41:58 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:41:58 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:41:58 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(54)
+#    Time: 220 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 54
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:45:17 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:45:17 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:45:17 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:45:17 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(72)
+#    Time: 380 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 72
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:47:03 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:47:03 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:47:03 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:47:03 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: Write address out of bounds.
+#    Time: 330 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 26
+# ** Error: Read address out of bounds.
+#    Time: 330 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 27
+# ** Error: Write address out of bounds.
+#    Time: 350 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 26
+# ** Error: Read address out of bounds.
+#    Time: 350 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 27
+# ** Error: Write address out of bounds.
+#    Time: 370 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 26
+# ** Error: Read address out of bounds.
+#    Time: 370 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 27
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(72)
+#    Time: 380 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 72
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:47:38 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 16:47:38 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:47:38 on Jul 07,2024
+# vlog -reportprogress 300 -work work C:/Users/danie/Desktop/Code/memory/tb_memory.sv 
+# -- Compiling module tb_memory
+# 
+# Top level modules:
+# 	tb_memory
+# End time: 16:47:38 on Jul 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_memory
+# Loading work.memory
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: Read address out of bounds.
+#    Time: 330 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 27
+# ** Error: Read address out of bounds.
+#    Time: 350 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 27
+# ** Error: Read address out of bounds.
+#    Time: 370 ns  Scope: tb_memory.arb File: C:/Users/danie/Desktop/Code/memory/memory.sv Line: 27
+# ** Note: $stop    : C:/Users/danie/Desktop/Code/memory/tb_memory.sv(72)
+#    Time: 380 ns  Iteration: 0  Instance: /tb_memory
+# Break in Module tb_memory at C:/Users/danie/Desktop/Code/memory/tb_memory.sv line 72
+# End time: 16:47:57 on Jul 07,2024, Elapsed time: 0:17:34
+# Errors: 3, Warnings: 0
